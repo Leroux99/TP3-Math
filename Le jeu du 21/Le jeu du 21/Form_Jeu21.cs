@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Le_jeu_du_21
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class Form_Jeu21 : Form
+    {
+        public Form_Jeu21()
+        {
+            InitializeComponent();
+        }
+    }
 }
