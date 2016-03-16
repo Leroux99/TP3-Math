@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card.cs" />
     <Compile Include="Form_Adversaire.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     <Compile Include="Form_Risque.Designer.cs">
       <DependentUpon>Form_Risque.cs</DependentUpon>
     </Compile>
+    <Compile Include="GamePlay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Adversaire.resx">
@@ -100,6 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\card.png" />
+    <Content Include="Resources\Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

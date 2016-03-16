@@ -69,8 +69,7 @@
             this.radioButton3_Prudent.Location = new System.Drawing.Point(50, 80);
             this.radioButton3_Prudent.Name = "radioButton3_Prudent";
             this.radioButton3_Prudent.Size = new System.Drawing.Size(65, 17);
-            this.radioButton3_Prudent.TabIndex = 0;
-            this.radioButton3_Prudent.TabStop = true;
+            this.radioButton3_Prudent.TabIndex = 2;
             this.radioButton3_Prudent.Text = "Prudent";
             this.radioButton3_Prudent.UseVisualStyleBackColor = true;
             // 
@@ -81,14 +80,14 @@
             this.radioButton2_Moyen.Location = new System.Drawing.Point(50, 57);
             this.radioButton2_Moyen.Name = "radioButton2_Moyen";
             this.radioButton2_Moyen.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2_Moyen.TabIndex = 0;
-            this.radioButton2_Moyen.TabStop = true;
+            this.radioButton2_Moyen.TabIndex = 1;
             this.radioButton2_Moyen.Text = "Moyen";
             this.radioButton2_Moyen.UseVisualStyleBackColor = true;
             // 
             // radioButton1_Courageux
             // 
             this.radioButton1_Courageux.AutoSize = true;
+            this.radioButton1_Courageux.Checked = true;
             this.radioButton1_Courageux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton1_Courageux.Location = new System.Drawing.Point(50, 34);
             this.radioButton1_Courageux.Name = "radioButton1_Courageux";
@@ -101,11 +100,12 @@
             // radioButton1_2_Courageux
             // 
             this.radioButton1_2_Courageux.AutoSize = true;
+            this.radioButton1_2_Courageux.Checked = true;
             this.radioButton1_2_Courageux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton1_2_Courageux.Location = new System.Drawing.Point(36, 34);
             this.radioButton1_2_Courageux.Name = "radioButton1_2_Courageux";
             this.radioButton1_2_Courageux.Size = new System.Drawing.Size(80, 17);
-            this.radioButton1_2_Courageux.TabIndex = 0;
+            this.radioButton1_2_Courageux.TabIndex = 3;
             this.radioButton1_2_Courageux.TabStop = true;
             this.radioButton1_2_Courageux.Text = "Courageux";
             this.radioButton1_2_Courageux.UseVisualStyleBackColor = true;
@@ -117,8 +117,7 @@
             this.radioButton2_2_Moyen.Location = new System.Drawing.Point(36, 57);
             this.radioButton2_2_Moyen.Name = "radioButton2_2_Moyen";
             this.radioButton2_2_Moyen.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2_2_Moyen.TabIndex = 0;
-            this.radioButton2_2_Moyen.TabStop = true;
+            this.radioButton2_2_Moyen.TabIndex = 4;
             this.radioButton2_2_Moyen.Text = "Moyen";
             this.radioButton2_2_Moyen.UseVisualStyleBackColor = true;
             // 
@@ -129,8 +128,7 @@
             this.radioButton3_3_Prudent.Location = new System.Drawing.Point(36, 80);
             this.radioButton3_3_Prudent.Name = "radioButton3_3_Prudent";
             this.radioButton3_3_Prudent.Size = new System.Drawing.Size(65, 17);
-            this.radioButton3_3_Prudent.TabIndex = 0;
-            this.radioButton3_3_Prudent.TabStop = true;
+            this.radioButton3_3_Prudent.TabIndex = 5;
             this.radioButton3_3_Prudent.Text = "Prudent";
             this.radioButton3_3_Prudent.UseVisualStyleBackColor = true;
             // 
@@ -152,10 +150,11 @@
             // 
             this.button_Annuler.BackColor = System.Drawing.SystemColors.Control;
             this.button_Annuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Annuler.ForeColor = System.Drawing.Color.Brown;
             this.button_Annuler.Location = new System.Drawing.Point(237, 274);
             this.button_Annuler.Name = "button_Annuler";
             this.button_Annuler.Size = new System.Drawing.Size(127, 45);
-            this.button_Annuler.TabIndex = 2;
+            this.button_Annuler.TabIndex = 5;
             this.button_Annuler.Text = "Annuler";
             this.button_Annuler.UseVisualStyleBackColor = false;
             this.button_Annuler.Click += new System.EventHandler(this.button_Annuler_Click);
@@ -164,10 +163,11 @@
             // 
             this.button_Commencer.BackColor = System.Drawing.SystemColors.Control;
             this.button_Commencer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Commencer.ForeColor = System.Drawing.Color.Brown;
             this.button_Commencer.Location = new System.Drawing.Point(370, 274);
             this.button_Commencer.Name = "button_Commencer";
             this.button_Commencer.Size = new System.Drawing.Size(127, 45);
-            this.button_Commencer.TabIndex = 2;
+            this.button_Commencer.TabIndex = 4;
             this.button_Commencer.Text = "Commencer";
             this.button_Commencer.UseVisualStyleBackColor = false;
             this.button_Commencer.Click += new System.EventHandler(this.button_OK_Click);
@@ -177,10 +177,11 @@
             this.checkBox_Comptage.AutoSize = true;
             this.checkBox_Comptage.BackColor = System.Drawing.SystemColors.Control;
             this.checkBox_Comptage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox_Comptage.ForeColor = System.Drawing.Color.Brown;
             this.checkBox_Comptage.Location = new System.Drawing.Point(194, 184);
             this.checkBox_Comptage.Name = "checkBox_Comptage";
             this.checkBox_Comptage.Size = new System.Drawing.Size(125, 17);
-            this.checkBox_Comptage.TabIndex = 3;
+            this.checkBox_Comptage.TabIndex = 2;
             this.checkBox_Comptage.Text = "Comptage de cartes";
             this.checkBox_Comptage.UseVisualStyleBackColor = false;
             // 
@@ -188,10 +189,11 @@
             // 
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.Control;
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Brown;
             this.numericUpDown1.Location = new System.Drawing.Point(194, 232);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(128, 22);
-            this.numericUpDown1.TabIndex = 4;
+            this.numericUpDown1.TabIndex = 3;
             // 
             // label1
             // 

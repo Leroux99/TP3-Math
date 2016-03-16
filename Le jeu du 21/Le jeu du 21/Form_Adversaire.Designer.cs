@@ -37,10 +37,11 @@
             // 
             this.button_ContreAI.BackColor = System.Drawing.SystemColors.Control;
             this.button_ContreAI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ContreAI.ForeColor = System.Drawing.Color.Brown;
             this.button_ContreAI.Location = new System.Drawing.Point(671, 125);
             this.button_ContreAI.Name = "button_ContreAI";
             this.button_ContreAI.Size = new System.Drawing.Size(270, 65);
-            this.button_ContreAI.TabIndex = 0;
+            this.button_ContreAI.TabIndex = 1;
             this.button_ContreAI.Text = "IA VS IA";
             this.button_ContreAI.UseVisualStyleBackColor = false;
             this.button_ContreAI.Click += new System.EventHandler(this.button_ContreAI_Click);
@@ -49,10 +50,11 @@
             // 
             this.button_ContreHuman.BackColor = System.Drawing.SystemColors.Control;
             this.button_ContreHuman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ContreHuman.ForeColor = System.Drawing.Color.Brown;
             this.button_ContreHuman.Location = new System.Drawing.Point(395, 125);
             this.button_ContreHuman.Name = "button_ContreHuman";
             this.button_ContreHuman.Size = new System.Drawing.Size(270, 65);
-            this.button_ContreHuman.TabIndex = 1;
+            this.button_ContreHuman.TabIndex = 0;
             this.button_ContreHuman.Text = "Humain VS IA";
             this.button_ContreHuman.UseVisualStyleBackColor = false;
             this.button_ContreHuman.Click += new System.EventHandler(this.button_ContreHuman_Click);
