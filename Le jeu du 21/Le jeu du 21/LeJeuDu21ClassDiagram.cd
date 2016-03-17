@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Le_jeu_du_21.Exceptions.BustException" Collapsed="true">
+    <Position X="3.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\BustException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Exceptions.LeJeuDu21Exception" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Exceptions\LeJeuDu21Exception.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Card" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAEAAAAAIAAAAAgAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Model\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.GamePlay" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\GamePlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Program" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Form_Adversaire" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAAAACAAAACAAACAAIAAAAAAAAQAAA=</HashCode>
+      <FileName>View\Form_Adversaire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Form_Jeu21" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAIACACAAARAAAACAAAACAAAAAAAAEAAYAIAAAAA=</HashCode>
+      <FileName>View\Form_Jeu21.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Form_Risque" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAICAAABAABgDAABACgAAAAEACAAAAEAgAAEA=</HashCode>
+      <FileName>View\Form_Risque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAEAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Le_jeu_du_21.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

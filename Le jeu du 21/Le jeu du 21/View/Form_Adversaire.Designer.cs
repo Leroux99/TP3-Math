@@ -31,14 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Adversaire));
             this.button_ContreAI = new System.Windows.Forms.Button();
             this.button_ContreHuman = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_ContreAI
             // 
             this.button_ContreAI.BackColor = System.Drawing.SystemColors.Control;
             this.button_ContreAI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ContreAI.ForeColor = System.Drawing.Color.Brown;
-            this.button_ContreAI.Location = new System.Drawing.Point(671, 125);
+            this.button_ContreAI.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ContreAI.ForeColor = System.Drawing.Color.Black;
+            this.button_ContreAI.Location = new System.Drawing.Point(34, 403);
             this.button_ContreAI.Name = "button_ContreAI";
             this.button_ContreAI.Size = new System.Drawing.Size(270, 65);
             this.button_ContreAI.TabIndex = 1;
@@ -50,8 +52,9 @@
             // 
             this.button_ContreHuman.BackColor = System.Drawing.SystemColors.Control;
             this.button_ContreHuman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ContreHuman.ForeColor = System.Drawing.Color.Brown;
-            this.button_ContreHuman.Location = new System.Drawing.Point(395, 125);
+            this.button_ContreHuman.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ContreHuman.ForeColor = System.Drawing.Color.Black;
+            this.button_ContreHuman.Location = new System.Drawing.Point(34, 332);
             this.button_ContreHuman.Name = "button_ContreHuman";
             this.button_ContreHuman.Size = new System.Drawing.Size(270, 65);
             this.button_ContreHuman.TabIndex = 0;
@@ -59,13 +62,25 @@
             this.button_ContreHuman.UseVisualStyleBackColor = false;
             this.button_ContreHuman.Click += new System.EventHandler(this.button_ContreHuman_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(642, 128);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Le Jeu Du 21";
+            // 
             // Form_Adversaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Le_jeu_du_21.Properties.Resources.wall;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_ContreHuman);
             this.Controls.Add(this.button_ContreAI);
             this.DoubleBuffered = true;
@@ -74,8 +89,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_Adversaire";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Black Jack";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -83,6 +100,7 @@
 
         private System.Windows.Forms.Button button_ContreAI;
         private System.Windows.Forms.Button button_ContreHuman;
+        private System.Windows.Forms.Label label1;
     }
 }
 

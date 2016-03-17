@@ -46,35 +46,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="Form_Adversaire.cs">
+    <Compile Include="Controller\GestionCarteController.cs" />
+    <Compile Include="Controller\GestionCarteVisual.cs" />
+    <Compile Include="Exceptions\BustException.cs" />
+    <Compile Include="Exceptions\LeJeuDu21Exception.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Humain.cs" />
+    <Compile Include="Model\IA.cs" />
+    <Compile Include="Model\LeJeuDu21Result.cs" />
+    <Compile Include="Model\LeJeuDu21ScoreCounter.cs" />
+    <Compile Include="Model\Paquet.cs" />
+    <Compile Include="Model\PaquetCarte.cs" />
+    <Compile Include="Model\SetCarte.cs" />
+    <Compile Include="View\Form_Adversaire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Adversaire.Designer.cs">
+    <Compile Include="View\Form_Adversaire.Designer.cs">
       <DependentUpon>Form_Adversaire.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Jeu21.cs">
+    <Compile Include="View\Form_Jeu21.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Jeu21.Designer.cs">
+    <Compile Include="View\Form_Jeu21.Designer.cs">
       <DependentUpon>Form_Jeu21.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Risque.cs">
+    <Compile Include="View\Form_Risque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Risque.Designer.cs">
+    <Compile Include="View\Form_Risque.Designer.cs">
       <DependentUpon>Form_Risque.cs</DependentUpon>
     </Compile>
-    <Compile Include="GamePlay.cs" />
+    <Compile Include="Model\LeJeuDu21Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_Adversaire.resx">
+    <EmbeddedResource Include="View\Form_Adversaire.resx">
       <DependentUpon>Form_Adversaire.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Jeu21.resx">
+    <EmbeddedResource Include="View\Form_Jeu21.resx">
       <DependentUpon>Form_Jeu21.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Risque.resx">
+    <EmbeddedResource Include="View\Form_Risque.resx">
       <DependentUpon>Form_Risque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,6 +98,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="LeJeuDu21ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,6 +119,7 @@
     <Content Include="Resources\card.png" />
     <Content Include="Resources\Icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
