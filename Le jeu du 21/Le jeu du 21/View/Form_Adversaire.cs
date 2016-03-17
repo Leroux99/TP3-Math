@@ -10,20 +10,21 @@ namespace Le_jeu_du_21
 			InitializeComponent();
 		}
 
-        private void button_ContreAI_Click(object sender, EventArgs e)
+        private void button_ContreHuman_Click(object sender, EventArgs e)
         {
             // hide main form
             Hide();
 
             // show other form
             Form_Risque frm = new Form_Risque();
+            frm.groupBox_Joueur2.Enabled = false;
             frm.ShowDialog();
 
             // close application
             Close();
         }
 
-        private void button_ContreHuman_Click(object sender, EventArgs e)
+        private void button_ContreAI_Click(object sender, EventArgs e)
         {
             // hide main form
             Hide();

@@ -23,5 +23,18 @@ namespace Le_jeu_du_21
             richTextBox_Score1.SelectionAlignment = HorizontalAlignment.Center;
             richTextBox_Score2.SelectionAlignment = HorizontalAlignment.Center;
         }
+
+        private void button_Rejouer_Click(object sender, System.EventArgs e)
+        {
+            // hide main form
+            Hide();
+
+            // show other form
+            Form_Adversaire frm = new Form_Adversaire();
+            frm.ShowDialog();
+
+            // close application
+            Close();
+        }
     }
 }

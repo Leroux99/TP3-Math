@@ -254,7 +254,7 @@
         private System.Windows.Forms.RadioButton radioButton1_2_Courageux;
         private System.Windows.Forms.RadioButton radioButton2_2_Moyen;
         private System.Windows.Forms.RadioButton radioButton3_3_Prudent;
-        private System.Windows.Forms.GroupBox groupBox_Joueur2;
+        public System.Windows.Forms.GroupBox groupBox_Joueur2;
         private System.Windows.Forms.Button button_Annuler;
         private System.Windows.Forms.Button button_Commencer;
         private System.Windows.Forms.CheckBox checkBox_Comptage;

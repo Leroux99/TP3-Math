@@ -44,6 +44,7 @@
             this.pictureBox3_Player1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2_Player1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1_Player1 = new System.Windows.Forms.PictureBox();
+            this.button_Rejouer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_Player2)).BeginInit();
@@ -58,9 +59,9 @@
             this.button_Arrêter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arrêter.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Arrêter.ForeColor = System.Drawing.Color.Black;
-            this.button_Arrêter.Location = new System.Drawing.Point(646, 480);
+            this.button_Arrêter.Location = new System.Drawing.Point(421, 460);
             this.button_Arrêter.Name = "button_Arrêter";
-            this.button_Arrêter.Size = new System.Drawing.Size(172, 45);
+            this.button_Arrêter.Size = new System.Drawing.Size(172, 65);
             this.button_Arrêter.TabIndex = 2;
             this.button_Arrêter.Text = "Arrêter";
             this.button_Arrêter.UseVisualStyleBackColor = false;
@@ -97,7 +98,7 @@
             this.button_DétailsCalculs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DétailsCalculs.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_DétailsCalculs.ForeColor = System.Drawing.Color.Black;
-            this.button_DétailsCalculs.Location = new System.Drawing.Point(824, 480);
+            this.button_DétailsCalculs.Location = new System.Drawing.Point(646, 480);
             this.button_DétailsCalculs.Name = "button_DétailsCalculs";
             this.button_DétailsCalculs.Size = new System.Drawing.Size(172, 45);
             this.button_DétailsCalculs.TabIndex = 3;
@@ -248,6 +249,20 @@
             this.pictureBox1_Player1.TabIndex = 6;
             this.pictureBox1_Player1.TabStop = false;
             // 
+            // button_Rejouer
+            // 
+            this.button_Rejouer.BackColor = System.Drawing.SystemColors.Control;
+            this.button_Rejouer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Rejouer.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Rejouer.ForeColor = System.Drawing.Color.Black;
+            this.button_Rejouer.Location = new System.Drawing.Point(824, 480);
+            this.button_Rejouer.Name = "button_Rejouer";
+            this.button_Rejouer.Size = new System.Drawing.Size(172, 45);
+            this.button_Rejouer.TabIndex = 2;
+            this.button_Rejouer.Text = "Rejouer";
+            this.button_Rejouer.UseVisualStyleBackColor = false;
+            this.button_Rejouer.Click += new System.EventHandler(this.button_Rejouer_Click);
+            // 
             // Form_Jeu21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,6 +285,7 @@
             this.Controls.Add(this.button_DétailsCalculs);
             this.Controls.Add(this.button_Passer);
             this.Controls.Add(this.button_NouvelleCarte);
+            this.Controls.Add(this.button_Rejouer);
             this.Controls.Add(this.button_Arrêter);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,8 +309,8 @@
         #endregion
 
         private System.Windows.Forms.Button button_Arrêter;
-        private System.Windows.Forms.Button button_NouvelleCarte;
-        private System.Windows.Forms.Button button_Passer;
+        public System.Windows.Forms.Button button_NouvelleCarte;
+        public System.Windows.Forms.Button button_Passer;
         private System.Windows.Forms.Button button_DétailsCalculs;
         private System.Windows.Forms.PictureBox pictureBox1_Player1;
         private System.Windows.Forms.PictureBox pictureBox1_Player2;
@@ -307,5 +323,6 @@
         private System.Windows.Forms.PictureBox pictureBox2_Player2;
         private System.Windows.Forms.PictureBox pictureBox3_Player2;
         private System.Windows.Forms.RichTextBox richTextBox_Score1;
+        private System.Windows.Forms.Button button_Rejouer;
     }
 }
