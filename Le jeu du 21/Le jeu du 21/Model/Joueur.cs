@@ -3,10 +3,8 @@
 	public abstract class Joueur
 	{
 		private PaquetCarte Hand;
-		private bool hasPassed;
 		public Joueur()
 		{
-			hasPassed = false;
 			Hand = new PaquetCarte();
 		}
 
@@ -28,16 +26,6 @@
 		public void AddCard(Card C)
 		{
 			Hand.TakeCard(C);
-		}
-
-		public void Pass()
-		{
-			hasPassed = true;
-		}
-
-		public bool Passed()
-		{
-			return hasPassed;
 		}
 	}
 }

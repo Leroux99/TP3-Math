@@ -42,14 +42,15 @@ namespace Le_jeu_du_21
             Close();
         }
 
-		private void button_NouvelleCarte_Click(object sender, System.EventArgs e)
+		private void Jouer(object sender, System.EventArgs e)
 		{
 			GamePlay.TabJoueur[JoueurActuel].Jouer();
+			ChangementJoueur();
 		}
 
-		private void button_Passer_Click(object sender, System.EventArgs e)
+		private void Passer(object sender, System.EventArgs e)
 		{
-
+			ChangementJoueur();
 		}
 
 		private void button_Arrêter_Click(object sender, System.EventArgs e)
@@ -69,7 +70,7 @@ namespace Le_jeu_du_21
 			{
 				button_NouvelleCarte.Enabled = false;
 				button_Passer.Enabled = false;
-
+				Jouer(null, null);
 				System.Threading.Thread.Sleep(2000);
 			}
 			else

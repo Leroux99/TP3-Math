@@ -79,7 +79,7 @@
 			this.button_NouvelleCarte.TabIndex = 0;
 			this.button_NouvelleCarte.Text = "Nouvelle Carte";
 			this.button_NouvelleCarte.UseVisualStyleBackColor = false;
-			this.button_NouvelleCarte.Click += new System.EventHandler(this.button_NouvelleCarte_Click);
+			this.button_NouvelleCarte.Click += new System.EventHandler(this.Jouer);
 			// 
 			// button_Passer
 			// 
@@ -93,7 +93,7 @@
 			this.button_Passer.TabIndex = 1;
 			this.button_Passer.Text = "Passer";
 			this.button_Passer.UseVisualStyleBackColor = false;
-			this.button_Passer.Click += new System.EventHandler(this.button_Passer_Click);
+			this.button_Passer.Click += new System.EventHandler(this.Passer);
 			// 
 			// button_DétailsCalculs
 			// 
