@@ -2,10 +2,10 @@
 
 namespace Le_jeu_du_21.Model
 {
-    /// <summary>
-    /// The class is basically a wrapper over the list of cards
-    /// </summary>
-    class SetCarte
+	/// <summary>
+	/// The class is basically a wrapper over the list of cards
+	/// </summary>
+	public class SetCarte
     {
         /// <summary>
         /// List of cards in a set

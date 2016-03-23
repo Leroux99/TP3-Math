@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Le_jeu_du_21
+namespace Le_jeu_du_21.Model
 {
-    class Card
+    public class Card
     {
         public int Value { get; private set; }
 

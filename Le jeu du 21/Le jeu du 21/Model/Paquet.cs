@@ -3,7 +3,7 @@
     /// <summary>
     /// Deck class
     /// </summary>
-    class Paquet
+    public class Paquet
     {
          /// <summary>
         /// The number of cards in each deck is 52 by default (from 2♥ to A♠)

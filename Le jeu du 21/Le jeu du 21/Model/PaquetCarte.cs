@@ -2,7 +2,7 @@
 
 namespace Le_jeu_du_21.Model
 {
-    class PaquetCarte
+	public class PaquetCarte
     {
 
         protected string name;

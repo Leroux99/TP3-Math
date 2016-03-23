@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Le_jeu_du_21.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Le_jeu_du_21
@@ -6,10 +7,14 @@ namespace Le_jeu_du_21
 
     public partial class Form_Risque : Form
     {
+		int[] Pourcents;
         public Form_Risque()
         {
             InitializeComponent();
-        }
+			radioButton1_Courageux.Checked = true;
+			radioButton1_2_Courageux.Checked = true;
+			Pourcents = new int[] { Convert.ToInt32(radioButton1_Courageux.Tag), Convert.ToInt32(radioButton1_2_Courageux) };
+		}
 
         private void button_OK_Click(object sender, EventArgs e)
         {
@@ -24,7 +29,7 @@ namespace Le_jeu_du_21
                 frm.button_Passer.Enabled = false;
             }
             frm.ShowDialog();
-
+			SetPercentage();
             // close application
             Close();
         }
@@ -41,5 +46,21 @@ namespace Le_jeu_du_21
             // close application
             Close();
         }
-    }
+
+		private void SetPercentage()
+		{
+			if (groupBox_Joueur1.Enabled) GamePlay.TabJoueur = new Joueur[] { new Humain(), new IA(Pourcents[1]) };
+			else GamePlay.TabJoueur = new Joueur[] { new IA(Pourcents[0]), new IA(Pourcents[1]) };
+		}
+
+		private void Joueur1_Check_Changed(object sender, EventArgs e)
+		{
+			Pourcents[0] = Convert.ToInt32(Tag);
+		}
+
+		private void Joueur2_Check_Changed(object sender, EventArgs e)
+		{
+			Pourcents[1] = Convert.ToInt32(Tag);
+		}
+	}
 }

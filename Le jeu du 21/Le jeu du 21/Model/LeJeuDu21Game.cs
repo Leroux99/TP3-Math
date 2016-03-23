@@ -1,7 +1,7 @@
-﻿namespace Le_jeu_du_21
+﻿namespace Le_jeu_du_21.Model
 {
-    class GamePlay
+	public static class GamePlay
     {
-    
+		public static Joueur[] TabJoueur = null;
     }
 }

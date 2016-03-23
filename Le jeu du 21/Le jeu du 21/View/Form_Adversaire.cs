@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Le_jeu_du_21.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Le_jeu_du_21
@@ -19,7 +20,6 @@ namespace Le_jeu_du_21
             Form_Risque frm = new Form_Risque();
             frm.groupBox_Joueur2.Enabled = false;
             frm.ShowDialog();
-
             // close application
             Close();
         }
@@ -32,9 +32,8 @@ namespace Le_jeu_du_21
             // show other form
             Form_Risque frm = new Form_Risque();
             frm.ShowDialog();
-
-            // close application
-            Close();
+			// close application
+			Close();
         }
     }
 }

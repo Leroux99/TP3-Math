@@ -3,7 +3,7 @@
     /// <summary>
     /// Class for counting the total score in a cardset
     /// </summary>
-    class LeJeuDu21ScoreCounter
+    public class LeJeuDu21ScoreCounter
     {
         /// <summary>
         /// Main method counts the total score
