@@ -2,15 +2,5 @@
 {
     public class Humain : Joueur
     {
-		public Humain()
-		{
-
-		}
-
-		//Lets the player play
-		public override void Jouer()
-		{
-			
-		}
     }
 }

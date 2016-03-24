@@ -9,7 +9,10 @@
 		}
 
 		//Abstract class that will call its child's Jouer() class. It will let the player play.
-		public abstract void Jouer();
+		public void Jouer()
+		{
+			//Hand.TakeCard(C);
+		}
 
 		//Get the player's current score
 		public int GetScore()
@@ -21,11 +24,6 @@
 		public void ClearHand()
 		{
 			Hand.ClearHand();
-		}
-
-		public void AddCard(Card C)
-		{
-			Hand.TakeCard(C);
 		}
 	}
 }

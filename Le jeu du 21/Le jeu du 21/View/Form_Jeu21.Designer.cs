@@ -308,6 +308,9 @@
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+			this.JoueurActuel = 0;
+			this.TourJoue = 0;
+			this.AfficherTextes();
         }
 
         #endregion

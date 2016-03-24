@@ -21,15 +21,15 @@ namespace Le_jeu_du_21
             // hide main form
             Hide();
 			SetPercentage();
+			GamePlay.NombrePartie = Convert.ToInt32(numericUpDown1.Value);
 
 			// show other form
 			Form_Jeu21 frm = new Form_Jeu21();
-            if (!groupBox_Joueur2.Enabled)
+            if (groupBox_Joueur2.Enabled)
             {
                 frm.button_NouvelleCarte.Enabled = false;
                 frm.button_Passer.Enabled = false;
             }
-			frm.Commencer();
 			frm.ShowDialog();
             // close application
             Close();

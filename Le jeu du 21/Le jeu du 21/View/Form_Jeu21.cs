@@ -3,77 +3,108 @@ using System.Windows.Forms;
 
 namespace Le_jeu_du_21
 {
-    public partial class Form_Jeu21 : Form
-    {
+	public partial class Form_Jeu21 : Form
+	{
 		private int JoueurActuel;
+		private int TourJoue;
 		private const int JoueurMax = 1;
-        public Form_Jeu21()
-        {
-            InitializeComponent();
-			JoueurActuel = JoueurMax;
-            /*Game Card Exemple*/
-            Card card = new Card("S2");
-            var imgarray  = card.GraphicsCards();
-            pictureBox1_Player1.Image = imgarray[0];
-            pictureBox2_Player1.Image = imgarray[10];
-            pictureBox3_Player1.Image = imgarray[20];
-            pictureBox1_Player2.Image = imgarray[30];
-            pictureBox2_Player2.Image = imgarray[40];
-            pictureBox3_Player2.Image = imgarray[50];
+		public Form_Jeu21()
+		{
+			InitializeComponent();
+			/*Game Card Exemple*/
+			//Card card = new Card("S2");
+			//var imgarray  = card.GraphicsCards();
+			//pictureBox1_Player1.Image = imgarray[0];
+			//pictureBox2_Player1.Image = imgarray[10];
+			//pictureBox3_Player1.Image = imgarray[20];
+			//pictureBox1_Player2.Image = imgarray[30];
+			//pictureBox2_Player2.Image = imgarray[40];
+			//pictureBox3_Player2.Image = imgarray[50];
+			/*Game Log && Score Center Text*/
+		}
 
-            /*Game Log && Score Center Text*/
-        }
+		public void Reset()
+		{
+			Controls.Clear();
+			InitializeComponent();
+		}
 
-        private void button_Rejouer_Click(object sender, System.EventArgs e)
-        {
-            // hide main form
-            Hide();
+		private void button_Rejouer_Click(object sender, System.EventArgs e)
+		{
+			// hide main form
+			Hide();
 
-            // show other form
-            Form_Adversaire frm = new Form_Adversaire();
-            frm.ShowDialog();
+			// show other form
+			Form_Adversaire frm = new Form_Adversaire();
+			frm.ShowDialog();
 
-            // close application
-            Close();
-        }
+			// close application
+			Close();
+		}
 
 		private void Jouer(object sender, System.EventArgs e)
 		{
 			GamePlay.TabJoueur[JoueurActuel].Jouer();
-			ChangementJoueur();
+			//TODO Afficher carte
+			ChangementTour();
 		}
 
 		private void Passer(object sender, System.EventArgs e)
 		{
-			ChangementJoueur();
+			//TODO Afficher X à la position de la carte
+			ChangementTour();
 		}
 
 		private void button_Arrêter_Click(object sender, System.EventArgs e)
 		{
-
+			//TODO Arrêter la partie
 		}
 
 		private void button_DétailsCalculs_Click(object sender, System.EventArgs e)
 		{
-
+			//TODO afficher une forme avec les détails
 		}
 
-		private void ChangementJoueur()
+		private void ChangementTour()
 		{
-			JoueurActuel = JoueurActuel == JoueurMax ? 0 : JoueurActuel += 1;
-			AfficherTextes();
-			if (GamePlay.TabJoueur[JoueurActuel].GetType() == typeof(IA))
-			{
-				button_NouvelleCarte.Enabled = false;
-				button_Passer.Enabled = false;
-				System.Threading.Thread.Sleep(2000);
-				Jouer(null, null);
-			}
+			if (JoueurActuel == JoueurMax) TourJoue++;
+			if (TourJoue == GamePlay.NombreTourMax) FinPartie();
 			else
 			{
-				button_NouvelleCarte.Enabled = true;
-				button_Passer.Enabled = true;
+				JoueurActuel = JoueurActuel == JoueurMax ? 0 : JoueurActuel + 1;
+				AfficherTextes();
+				GestionProchainTour();
 			}
+		}
+
+		private void GestionProchainTour()
+		{
+			if (GamePlay.TabJoueur[JoueurActuel].GetType() == typeof(IA)) TourIA();
+			else TourHumain();
+		}
+
+		private void FinPartie()
+		{
+			MessageBox.Show("MessageBox temporaire qui montre lorsqu'une nouvelle partie commence.");
+			//Afficher le gagnant
+			GamePlay.PartieJouee++;
+			if (GamePlay.PartieJouee == GamePlay.NombrePartie) button_Rejouer_Click(null, null);
+			else Reset();
+		}
+
+		private void TourHumain()
+		{
+			button_NouvelleCarte.Enabled = true;
+			button_Passer.Enabled = true;
+		}
+
+		private void TourIA()
+		{
+			button_NouvelleCarte.Enabled = false;
+			button_Passer.Enabled = false;
+			System.Threading.Thread.Sleep(2000);
+			if (GamePlay.PeutJouer((IA)GamePlay.TabJoueur[JoueurActuel])) Jouer(null, null);
+			else Passer(null, null);
 		}
 
 		private void AfficherTextes()
@@ -86,10 +117,7 @@ namespace Le_jeu_du_21
 			textBox_GameLog.TextAlign = HorizontalAlignment.Center;
 			richTextBox_Score1.SelectionAlignment = HorizontalAlignment.Center;
 			richTextBox_Score2.SelectionAlignment = HorizontalAlignment.Center;
-		}
-		public void Commencer()
-		{
-			ChangementJoueur();
+			this.Refresh();
 		}
 	}
 }

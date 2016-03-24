@@ -9,13 +9,12 @@
 		}
 		public IA(int PourcentageChance)
 		{
-			Chance = PourcentageChance;
+			Chance = PourcentageChance >= 0 && PourcentageChance <= 100 ? PourcentageChance : 80;
 		}
 
-		//Makes the AI play
-		public override void Jouer()
+		public int GetPourcentage()
 		{
-
+			return Chance;
 		}
 	}
 }
