@@ -51,11 +51,7 @@ namespace Le_jeu_du_21
 		private void SetPercentage()
 		{
 			if (!groupBox_Joueur2.Enabled) GamePlay.TabJoueur = new Joueur[] { new Humain(), new IA(Pourcents[0]) };
-			else
-			{
-				GamePlay.TabJoueur = new Joueur[] { new IA(Pourcents[0]), new IA(Pourcents[1]) };
-				GamePlay.AllIA = true;
-			}
+			else GamePlay.TabJoueur = new Joueur[] { new IA(Pourcents[0]), new IA(Pourcents[1]) };
 		}
 
 		private void Joueur1_Check_Changed(object sender, EventArgs e)

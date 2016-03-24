@@ -13,6 +13,7 @@ namespace Le_jeu_du_21
 
 		private void button_ContreHuman_Click(object sender, EventArgs e)
 		{
+			GamePlay.AllIA = false;
 			// hide main form
 			Hide();
 
@@ -26,6 +27,7 @@ namespace Le_jeu_du_21
 
 		private void button_ContreAI_Click(object sender, EventArgs e)
 		{
+			GamePlay.AllIA = true;
 			// hide main form
 			Hide();
 
