@@ -1,7 +1,7 @@
 ﻿namespace Le_jeu_du_21.Model
 {
-    public class IA : Joueur
-    {
+	public class IA : Joueur
+	{
 		private int Chance;
 		public IA()
 		{

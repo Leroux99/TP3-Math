@@ -1,4 +1,5 @@
 ﻿using Le_jeu_du_21.Model;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Le_jeu_du_21
@@ -8,9 +9,17 @@ namespace Le_jeu_du_21
 		private int JoueurActuel;
 		private int TourJoue;
 		private const int JoueurMax = 1;
+		private BackgroundWorker bw = new BackgroundWorker();
 		public Form_Jeu21()
 		{
 			InitializeComponent();
+			AfficherTextes();
+			if (GamePlay.AllIA)
+			{
+				bw.DoWork += StartIA;
+				bw.RunWorkerCompleted += IAWork;
+				bw.RunWorkerAsync();
+			}
 			/*Game Card Exemple*/
 			//Card card = new Card("S2");
 			//var imgarray  = card.GraphicsCards();
@@ -27,6 +36,8 @@ namespace Le_jeu_du_21
 		{
 			Controls.Clear();
 			InitializeComponent();
+			AfficherTextes();
+			if (GamePlay.AllIA) bw.RunWorkerAsync();
 		}
 
 		private void button_Rejouer_Click(object sender, System.EventArgs e)
@@ -102,7 +113,7 @@ namespace Le_jeu_du_21
 		{
 			button_NouvelleCarte.Enabled = false;
 			button_Passer.Enabled = false;
-			System.Threading.Thread.Sleep(2000);
+			System.Threading.Thread.Sleep(GamePlay.PAUSE);
 			if (GamePlay.PeutJouer((IA)GamePlay.TabJoueur[JoueurActuel])) Jouer(null, null);
 			else Passer(null, null);
 		}
@@ -118,6 +129,16 @@ namespace Le_jeu_du_21
 			richTextBox_Score1.SelectionAlignment = HorizontalAlignment.Center;
 			richTextBox_Score2.SelectionAlignment = HorizontalAlignment.Center;
 			this.Refresh();
+		}
+
+		private void StartIA(object sender, DoWorkEventArgs e)
+		{
+			System.Threading.Thread.Sleep(GamePlay.PAUSE);
+		}
+
+		private void IAWork(object sender, RunWorkerCompletedEventArgs e)
+		{
+			Jouer(null, null);
 		}
 	}
 }
