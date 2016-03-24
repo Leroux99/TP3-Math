@@ -22,11 +22,6 @@ namespace Le_jeu_du_21
             pictureBox3_Player2.Image = imgarray[50];
 
             /*Game Log && Score Center Text*/
-            textBox_GameLog.TextAlign = HorizontalAlignment.Center;
-            richTextBox_Score1.SelectionAlignment = HorizontalAlignment.Center;
-            richTextBox_Score2.SelectionAlignment = HorizontalAlignment.Center;
-			ShowDialog();
-			ChangementJoueur();
         }
 
         private void button_Rejouer_Click(object sender, System.EventArgs e)
@@ -66,20 +61,35 @@ namespace Le_jeu_du_21
 		private void ChangementJoueur()
 		{
 			JoueurActuel = JoueurActuel == JoueurMax ? 0 : JoueurActuel += 1;
-			if(GamePlay.TabJoueur[JoueurActuel].GetType() == typeof(IA))
+			AfficherTextes();
+			if (GamePlay.TabJoueur[JoueurActuel].GetType() == typeof(IA))
 			{
 				button_NouvelleCarte.Enabled = false;
 				button_Passer.Enabled = false;
-				Jouer(null, null);
 				System.Threading.Thread.Sleep(2000);
+				Jouer(null, null);
 			}
 			else
 			{
 				button_NouvelleCarte.Enabled = true;
 				button_Passer.Enabled = true;
 			}
-
 		}
 
+		private void AfficherTextes()
+		{
+			textBox_GameLog.Text = "Au tour du joueur " + (JoueurActuel + 1) + " de jouer. Vous avez " +
+				GamePlay.TabJoueur[JoueurActuel].GetScore() + " points.";
+			richTextBox_Score1.Text = GamePlay.TabJoueur[0].GetScore().ToString();
+			richTextBox_Score2.Text = GamePlay.TabJoueur[1].GetScore().ToString();
+
+			textBox_GameLog.TextAlign = HorizontalAlignment.Center;
+			richTextBox_Score1.SelectionAlignment = HorizontalAlignment.Center;
+			richTextBox_Score2.SelectionAlignment = HorizontalAlignment.Center;
+		}
+		public void Commencer()
+		{
+			ChangementJoueur();
+		}
 	}
 }

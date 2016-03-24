@@ -13,23 +13,24 @@ namespace Le_jeu_du_21
             InitializeComponent();
 			radioButton1_Courageux.Checked = true;
 			radioButton1_2_Courageux.Checked = true;
-			Pourcents = new int[] { Convert.ToInt32(radioButton1_Courageux.Tag), Convert.ToInt32(radioButton1_2_Courageux) };
+			Pourcents = new int[] { Convert.ToInt32(radioButton1_Courageux.Tag), Convert.ToInt32(radioButton1_2_Courageux.Tag) };
 		}
 
         private void button_OK_Click(object sender, EventArgs e)
         {
             // hide main form
             Hide();
+			SetPercentage();
 
-            // show other form
-            Form_Jeu21 frm = new Form_Jeu21();
-            if (groupBox_Joueur2.Enabled == false)
+			// show other form
+			Form_Jeu21 frm = new Form_Jeu21();
+            if (!groupBox_Joueur2.Enabled)
             {
                 frm.button_NouvelleCarte.Enabled = false;
                 frm.button_Passer.Enabled = false;
             }
-            frm.ShowDialog();
-			SetPercentage();
+			frm.Commencer();
+			frm.ShowDialog();
             // close application
             Close();
         }
@@ -49,7 +50,7 @@ namespace Le_jeu_du_21
 
 		private void SetPercentage()
 		{
-			if (groupBox_Joueur1.Enabled) GamePlay.TabJoueur = new Joueur[] { new Humain(), new IA(Pourcents[1]) };
+			if (groupBox_Joueur1.Enabled) GamePlay.TabJoueur = new Joueur[] { new Humain(), new IA(Pourcents[0]) };
 			else GamePlay.TabJoueur = new Joueur[] { new IA(Pourcents[0]), new IA(Pourcents[1]) };
 		}
 

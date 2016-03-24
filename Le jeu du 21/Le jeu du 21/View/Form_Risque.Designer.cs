@@ -209,9 +209,19 @@
 			this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.numericUpDown1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.numericUpDown1.Location = new System.Drawing.Point(3, 95);
+			this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(128, 29);
 			this.numericUpDown1.TabIndex = 3;
+			this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			// 
 			// groupBox_Option
 			// 
