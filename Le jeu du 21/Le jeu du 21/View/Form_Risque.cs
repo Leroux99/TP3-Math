@@ -1,5 +1,6 @@
-﻿using Le_jeu_du_21.Model;
-using System;
+﻿using System;
+using System.Linq;
+using Le_jeu_du_21.Model;
 using System.Windows.Forms;
 
 namespace Le_jeu_du_21
@@ -7,24 +8,47 @@ namespace Le_jeu_du_21
 
 	public partial class Form_Risque : Form
 	{
-		int[] Pourcents;
-		public Form_Risque()
+        /// <summary>
+        /// Variables
+        /// </summary>
+        public Joueur.Risk_Level Player1;
+        public Joueur.Risk_Level Player2;
+        public bool Player1_Playable;
+        public bool Player2_Playable;
+
+        /// <summary>
+        /// Form Constructor
+        /// </summary>
+        public Form_Risque()
 		{
 			InitializeComponent();
-			radioButton1_Courageux.Checked = true;
-			radioButton1_2_Courageux.Checked = true;
-			Pourcents = new int[] { Convert.ToInt32(radioButton1_Courageux.Tag), Convert.ToInt32(radioButton1_2_Courageux.Tag) };
-		}
+            Player1 = Player2 = Joueur.Risk_Level.Aucun;
+        }
 
+        /// <summary>
+        /// Ok Button
+        /// </summary>
 		private void button_OK_Click(object sender, EventArgs e)
 		{
 			// hide main form
 			Hide();
-			SetPercentage();
-			GamePlay.NombrePartie = Convert.ToInt32(numericUpDown1.Value);
 
-			// show other form
-			Form_Jeu21 frm = new Form_Jeu21();
+            //GamePlay.NombrePartie = Convert.ToInt32(numericUpDown1.Value);
+
+            if (groupBox_Joueur1.Controls.OfType<RadioButton>().Any(x => x.Checked))
+            {
+                Player1 = (Joueur.Risk_Level)Enum.Parse(typeof(Joueur.Risk_Level), groupBox_Joueur1.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+                Player1_Playable = checkBox_Comptage.Checked;
+            }
+
+            if (groupBox_Joueur2.Controls.OfType<RadioButton>().Any(x => x.Checked))
+            {
+                Player2 = (Joueur.Risk_Level)Enum.Parse(typeof(Joueur.Risk_Level), groupBox_Joueur2.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+                Player2_Playable = checkBox_Comptage.Checked;
+            }
+
+            // show other form
+            Form_Jeu21 frm = new Form_Jeu21();
 			if (groupBox_Joueur2.Enabled)
 			{
 				frm.button_NouvelleCarte.Enabled = false;
@@ -35,6 +59,9 @@ namespace Le_jeu_du_21
 			Close();
 		}
 
+        /// <summary>
+        /// Annuler Button
+        /// </summary>
 		private void button_Annuler_Click(object sender, EventArgs e)
 		{
 			// hide main form
@@ -46,22 +73,6 @@ namespace Le_jeu_du_21
 
 			// close application
 			Close();
-		}
-
-		private void SetPercentage()
-		{
-			if (!groupBox_Joueur2.Enabled) GamePlay.TabJoueur = new Joueur[] { new Humain(), new IA(Pourcents[0]) };
-			else GamePlay.TabJoueur = new Joueur[] { new IA(Pourcents[0]), new IA(Pourcents[1]) };
-		}
-
-		private void Joueur1_Check_Changed(object sender, EventArgs e)
-		{
-			Pourcents[0] = Convert.ToInt32(Tag);
-		}
-
-		private void Joueur2_Check_Changed(object sender, EventArgs e)
-		{
-			Pourcents[1] = Convert.ToInt32(Tag);
 		}
 	}
 }

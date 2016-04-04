@@ -90,7 +90,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_Adversaire";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Black Jack";
+            this.Text = "Le jeu du 21 - Adversaire";
             this.ResumeLayout(false);
             this.PerformLayout();
 

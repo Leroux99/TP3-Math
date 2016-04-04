@@ -1,10 +1,9 @@
-﻿using Le_jeu_du_21.Model;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Le_jeu_du_21
 {
-	public partial class Form_Adversaire : Form
+    public partial class Form_Adversaire : Form
 	{
 		public Form_Adversaire()
 		{
@@ -13,29 +12,44 @@ namespace Le_jeu_du_21
 
 		private void button_ContreHuman_Click(object sender, EventArgs e)
 		{
-			GamePlay.AllIA = false;
-			// hide main form
-			Hide();
+            /// <summary>
+            /// Hide Main Form
+            /// </summary>
+            Hide();
 
-			// show other form
-			Form_Risque frm = new Form_Risque();
+            /// <summary>
+            /// Show Other Form
+            /// </summary>
+            Form_Risque frm = new Form_Risque();
 			frm.groupBox_Joueur2.Enabled = false;
-			frm.ShowDialog();
-			// close application
-			Close();
+            frm.radioButton1_2_Courageux.Checked = false;
+            frm.radioButton2_2_Moyen.Checked = false;
+            frm.radioButton3_3_Prudent.Checked = false;
+            frm.ShowDialog();
+
+            /// <summary>
+            /// Close Application
+            /// </summary>
+            Close();
 		}
 
 		private void button_ContreAI_Click(object sender, EventArgs e)
 		{
-			GamePlay.AllIA = true;
-			// hide main form
-			Hide();
+            /// <summary>
+            /// Hide Main Form
+            /// </summary>
+            Hide();
 
-			// show other form
-			Form_Risque frm = new Form_Risque();
+            /// <summary>
+            /// Show Other Form
+            /// </summary>
+            Form_Risque frm = new Form_Risque();
 			frm.ShowDialog();
-			// close application
-			Close();
+
+            /// <summary>
+            /// Close Application
+            /// </summary>
+            Close();
 		}
 	}
 }
