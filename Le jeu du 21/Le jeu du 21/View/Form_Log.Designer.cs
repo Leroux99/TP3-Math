@@ -34,7 +34,8 @@
             // 
             // button_OK
             // 
-            this.button_OK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_OK.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_OK.Location = new System.Drawing.Point(824, 218);
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(172, 45);
@@ -46,7 +47,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage = global::Le_jeu_du_21.Properties.Resources.wall;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 275);
             this.Controls.Add(this.button_OK);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

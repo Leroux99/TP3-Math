@@ -34,6 +34,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(822, 102);
@@ -42,9 +43,12 @@
             // LBL_Score
             // 
             this.LBL_Score.AutoSize = true;
-            this.LBL_Score.Location = new System.Drawing.Point(3, 108);
+            this.LBL_Score.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Score.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LBL_Score.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Score.Location = new System.Drawing.Point(356, 108);
             this.LBL_Score.Name = "LBL_Score";
-            this.LBL_Score.Size = new System.Drawing.Size(38, 13);
+            this.LBL_Score.Size = new System.Drawing.Size(98, 37);
             this.LBL_Score.TabIndex = 1;
             this.LBL_Score.Text = "Score:";
             // 
@@ -58,7 +62,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LeJeuDu21_UserControl";
-            this.Size = new System.Drawing.Size(828, 131);
+            this.Size = new System.Drawing.Size(828, 153);
             this.ResumeLayout(false);
             this.PerformLayout();
 

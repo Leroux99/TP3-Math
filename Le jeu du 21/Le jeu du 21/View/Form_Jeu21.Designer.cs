@@ -32,25 +32,18 @@
             this.button_Arrêter = new System.Windows.Forms.Button();
             this.button_NouvelleCarte = new System.Windows.Forms.Button();
             this.button_Passer = new System.Windows.Forms.Button();
-            this.button_DétailsCalculs = new System.Windows.Forms.Button();
             this.textBox_GameLog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox_Score2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_Score1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox3_Player2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2_Player2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1_Player2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3_Player1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2_Player1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1_Player1 = new System.Windows.Forms.PictureBox();
             this.button_Rejouer = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_Player1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN_IA2_Journal = new System.Windows.Forms.Button();
+            this.BTN_IA1_Journal = new System.Windows.Forms.Button();
+            this.leJeuDu21_UserControl2 = new Le_jeu_du_21.LeJeuDu21_UserControl();
+            this.leJeuDu21_UserControl1 = new Le_jeu_du_21.LeJeuDu21_UserControl();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Arrêter
@@ -62,7 +55,7 @@
             this.button_Arrêter.Location = new System.Drawing.Point(421, 460);
             this.button_Arrêter.Name = "button_Arrêter";
             this.button_Arrêter.Size = new System.Drawing.Size(172, 65);
-            this.button_Arrêter.TabIndex = 2;
+            this.button_Arrêter.TabIndex = 3;
             this.button_Arrêter.Text = "Arrêter";
             this.button_Arrêter.UseVisualStyleBackColor = false;
             this.button_Arrêter.Click += new System.EventHandler(this.button_Arrêter_Click);
@@ -76,7 +69,7 @@
             this.button_NouvelleCarte.Location = new System.Drawing.Point(12, 480);
             this.button_NouvelleCarte.Name = "button_NouvelleCarte";
             this.button_NouvelleCarte.Size = new System.Drawing.Size(172, 45);
-            this.button_NouvelleCarte.TabIndex = 0;
+            this.button_NouvelleCarte.TabIndex = 1;
             this.button_NouvelleCarte.Text = "Nouvelle Carte";
             this.button_NouvelleCarte.UseVisualStyleBackColor = false;
             this.button_NouvelleCarte.Click += new System.EventHandler(this.Jouer);
@@ -90,24 +83,10 @@
             this.button_Passer.Location = new System.Drawing.Point(190, 480);
             this.button_Passer.Name = "button_Passer";
             this.button_Passer.Size = new System.Drawing.Size(172, 45);
-            this.button_Passer.TabIndex = 1;
+            this.button_Passer.TabIndex = 2;
             this.button_Passer.Text = "Passer";
             this.button_Passer.UseVisualStyleBackColor = false;
             this.button_Passer.Click += new System.EventHandler(this.Passer);
-            // 
-            // button_DétailsCalculs
-            // 
-            this.button_DétailsCalculs.BackColor = System.Drawing.SystemColors.Control;
-            this.button_DétailsCalculs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DétailsCalculs.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DétailsCalculs.ForeColor = System.Drawing.Color.Black;
-            this.button_DétailsCalculs.Location = new System.Drawing.Point(646, 480);
-            this.button_DétailsCalculs.Name = "button_DétailsCalculs";
-            this.button_DétailsCalculs.Size = new System.Drawing.Size(172, 45);
-            this.button_DétailsCalculs.TabIndex = 3;
-            this.button_DétailsCalculs.Text = "Détails Des Calculs";
-            this.button_DétailsCalculs.UseVisualStyleBackColor = false;
-            this.button_DétailsCalculs.Click += new System.EventHandler(this.button_DétailsCalculs_Click);
             // 
             // textBox_GameLog
             // 
@@ -116,12 +95,12 @@
             this.textBox_GameLog.Enabled = false;
             this.textBox_GameLog.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_GameLog.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox_GameLog.Location = new System.Drawing.Point(181, 12);
+            this.textBox_GameLog.Location = new System.Drawing.Point(190, 27);
             this.textBox_GameLog.Name = "textBox_GameLog";
             this.textBox_GameLog.ReadOnly = true;
             this.textBox_GameLog.Size = new System.Drawing.Size(644, 29);
             this.textBox_GameLog.TabIndex = 8;
-            this.textBox_GameLog.Text = "Au tour du joueur 1 de jouer. Vous avez 19.";
+            this.textBox_GameLog.TextChanged += new System.EventHandler(this.ShowTextInTextBox);
             // 
             // label1
             // 
@@ -130,7 +109,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(114, 165);
+            this.label1.Location = new System.Drawing.Point(83, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 23);
             this.label1.TabIndex = 0;
@@ -143,115 +122,11 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(820, 165);
+            this.label2.Location = new System.Drawing.Point(831, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Joueur 2";
-            // 
-            // richTextBox_Score2
-            // 
-            this.richTextBox_Score2.BackColor = System.Drawing.Color.FloralWhite;
-            this.richTextBox_Score2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox_Score2.Enabled = false;
-            this.richTextBox_Score2.Font = new System.Drawing.Font("Segoe UI Black", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Score2.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox_Score2.Location = new System.Drawing.Point(506, 165);
-            this.richTextBox_Score2.MaxLength = 25;
-            this.richTextBox_Score2.Multiline = false;
-            this.richTextBox_Score2.Name = "richTextBox_Score2";
-            this.richTextBox_Score2.ReadOnly = true;
-            this.richTextBox_Score2.Size = new System.Drawing.Size(224, 169);
-            this.richTextBox_Score2.TabIndex = 10;
-            this.richTextBox_Score2.Text = "17";
-            // 
-            // richTextBox_Score1
-            // 
-            this.richTextBox_Score1.BackColor = System.Drawing.Color.FloralWhite;
-            this.richTextBox_Score1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox_Score1.Enabled = false;
-            this.richTextBox_Score1.Font = new System.Drawing.Font("Segoe UI Black", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Score1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox_Score1.Location = new System.Drawing.Point(278, 165);
-            this.richTextBox_Score1.MaxLength = 25;
-            this.richTextBox_Score1.Multiline = false;
-            this.richTextBox_Score1.Name = "richTextBox_Score1";
-            this.richTextBox_Score1.ReadOnly = true;
-            this.richTextBox_Score1.Size = new System.Drawing.Size(224, 169);
-            this.richTextBox_Score1.TabIndex = 10;
-            this.richTextBox_Score1.Text = "19";
-            // 
-            // pictureBox3_Player2
-            // 
-            this.pictureBox3_Player2.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox3_Player2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3_Player2.Enabled = false;
-            this.pictureBox3_Player2.Location = new System.Drawing.Point(896, 235);
-            this.pictureBox3_Player2.Name = "pictureBox3_Player2";
-            this.pictureBox3_Player2.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox3_Player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3_Player2.TabIndex = 7;
-            this.pictureBox3_Player2.TabStop = false;
-            // 
-            // pictureBox2_Player2
-            // 
-            this.pictureBox2_Player2.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox2_Player2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2_Player2.Enabled = false;
-            this.pictureBox2_Player2.Location = new System.Drawing.Point(816, 235);
-            this.pictureBox2_Player2.Name = "pictureBox2_Player2";
-            this.pictureBox2_Player2.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox2_Player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2_Player2.TabIndex = 7;
-            this.pictureBox2_Player2.TabStop = false;
-            // 
-            // pictureBox1_Player2
-            // 
-            this.pictureBox1_Player2.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox1_Player2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1_Player2.Enabled = false;
-            this.pictureBox1_Player2.Location = new System.Drawing.Point(736, 235);
-            this.pictureBox1_Player2.Name = "pictureBox1_Player2";
-            this.pictureBox1_Player2.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox1_Player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1_Player2.TabIndex = 7;
-            this.pictureBox1_Player2.TabStop = false;
-            // 
-            // pictureBox3_Player1
-            // 
-            this.pictureBox3_Player1.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox3_Player1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3_Player1.Enabled = false;
-            this.pictureBox3_Player1.Location = new System.Drawing.Point(38, 235);
-            this.pictureBox3_Player1.Name = "pictureBox3_Player1";
-            this.pictureBox3_Player1.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox3_Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3_Player1.TabIndex = 6;
-            this.pictureBox3_Player1.TabStop = false;
-            // 
-            // pictureBox2_Player1
-            // 
-            this.pictureBox2_Player1.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox2_Player1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2_Player1.Enabled = false;
-            this.pictureBox2_Player1.Location = new System.Drawing.Point(118, 235);
-            this.pictureBox2_Player1.Name = "pictureBox2_Player1";
-            this.pictureBox2_Player1.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox2_Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2_Player1.TabIndex = 6;
-            this.pictureBox2_Player1.TabStop = false;
-            // 
-            // pictureBox1_Player1
-            // 
-            this.pictureBox1_Player1.BackColor = System.Drawing.Color.FloralWhite;
-            this.pictureBox1_Player1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1_Player1.Enabled = false;
-            this.pictureBox1_Player1.Location = new System.Drawing.Point(198, 235);
-            this.pictureBox1_Player1.Name = "pictureBox1_Player1";
-            this.pictureBox1_Player1.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox1_Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1_Player1.TabIndex = 6;
-            this.pictureBox1_Player1.TabStop = false;
             // 
             // button_Rejouer
             // 
@@ -262,10 +137,79 @@
             this.button_Rejouer.Location = new System.Drawing.Point(824, 480);
             this.button_Rejouer.Name = "button_Rejouer";
             this.button_Rejouer.Size = new System.Drawing.Size(172, 45);
-            this.button_Rejouer.TabIndex = 2;
+            this.button_Rejouer.TabIndex = 5;
             this.button_Rejouer.Text = "Rejouer";
             this.button_Rejouer.UseVisualStyleBackColor = false;
             this.button_Rejouer.Click += new System.EventHandler(this.button_Rejouer_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichierToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fichierToolStripMenuItem
+            // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
+            // BTN_IA2_Journal
+            // 
+            this.BTN_IA2_Journal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_IA2_Journal.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_IA2_Journal.Location = new System.Drawing.Point(646, 502);
+            this.BTN_IA2_Journal.Name = "BTN_IA2_Journal";
+            this.BTN_IA2_Journal.Size = new System.Drawing.Size(172, 23);
+            this.BTN_IA2_Journal.TabIndex = 12;
+            this.BTN_IA2_Journal.Text = "Journal AI 2";
+            this.BTN_IA2_Journal.UseVisualStyleBackColor = true;
+            this.BTN_IA2_Journal.Click += new System.EventHandler(this.BTN_IA2_Journal_Click);
+            // 
+            // BTN_IA1_Journal
+            // 
+            this.BTN_IA1_Journal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_IA1_Journal.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_IA1_Journal.Location = new System.Drawing.Point(646, 480);
+            this.BTN_IA1_Journal.Name = "BTN_IA1_Journal";
+            this.BTN_IA1_Journal.Size = new System.Drawing.Size(172, 24);
+            this.BTN_IA1_Journal.TabIndex = 6;
+            this.BTN_IA1_Journal.Text = "Journal AI 1";
+            this.BTN_IA1_Journal.UseVisualStyleBackColor = true;
+            this.BTN_IA1_Journal.Click += new System.EventHandler(this.BTN_IA1_Journal_Click);
+            // 
+            // leJeuDu21_UserControl2
+            // 
+            this.leJeuDu21_UserControl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leJeuDu21_UserControl2.BackgroundImage")));
+            this.leJeuDu21_UserControl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.leJeuDu21_UserControl2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leJeuDu21_UserControl2.Location = new System.Drawing.Point(83, 301);
+            this.leJeuDu21_UserControl2.Name = "leJeuDu21_UserControl2";
+            this.leJeuDu21_UserControl2.Size = new System.Drawing.Size(828, 153);
+            this.leJeuDu21_UserControl2.TabIndex = 10;
+            // 
+            // leJeuDu21_UserControl1
+            // 
+            this.leJeuDu21_UserControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leJeuDu21_UserControl1.BackgroundImage")));
+            this.leJeuDu21_UserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.leJeuDu21_UserControl1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leJeuDu21_UserControl1.Location = new System.Drawing.Point(83, 62);
+            this.leJeuDu21_UserControl1.Name = "leJeuDu21_UserControl1";
+            this.leJeuDu21_UserControl1.Size = new System.Drawing.Size(828, 153);
+            this.leJeuDu21_UserControl1.TabIndex = 9;
             // 
             // Form_Jeu21
             // 
@@ -275,36 +219,29 @@
             this.BackgroundImage = global::Le_jeu_du_21.Properties.Resources.wall;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 537);
-            this.Controls.Add(this.richTextBox_Score1);
-            this.Controls.Add(this.richTextBox_Score2);
+            this.Controls.Add(this.BTN_IA1_Journal);
+            this.Controls.Add(this.BTN_IA2_Journal);
+            this.Controls.Add(this.leJeuDu21_UserControl2);
+            this.Controls.Add(this.leJeuDu21_UserControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_GameLog);
-            this.Controls.Add(this.pictureBox3_Player2);
-            this.Controls.Add(this.pictureBox2_Player2);
-            this.Controls.Add(this.pictureBox1_Player2);
-            this.Controls.Add(this.pictureBox3_Player1);
-            this.Controls.Add(this.pictureBox2_Player1);
-            this.Controls.Add(this.pictureBox1_Player1);
-            this.Controls.Add(this.button_DétailsCalculs);
             this.Controls.Add(this.button_Passer);
             this.Controls.Add(this.button_NouvelleCarte);
             this.Controls.Add(this.button_Rejouer);
             this.Controls.Add(this.button_Arrêter);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form_Jeu21";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Le jeu du 21 - Jeu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_Player1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,18 +252,16 @@
         private System.Windows.Forms.Button button_Arrêter;
         public System.Windows.Forms.Button button_NouvelleCarte;
         public System.Windows.Forms.Button button_Passer;
-        private System.Windows.Forms.Button button_DétailsCalculs;
-        private System.Windows.Forms.PictureBox pictureBox1_Player1;
-        private System.Windows.Forms.PictureBox pictureBox1_Player2;
         private System.Windows.Forms.TextBox textBox_GameLog;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox_Score2;
-        private System.Windows.Forms.PictureBox pictureBox2_Player1;
-        private System.Windows.Forms.PictureBox pictureBox3_Player1;
-        private System.Windows.Forms.PictureBox pictureBox2_Player2;
-        private System.Windows.Forms.PictureBox pictureBox3_Player2;
-        private System.Windows.Forms.RichTextBox richTextBox_Score1;
         private System.Windows.Forms.Button button_Rejouer;
+        private LeJeuDu21_UserControl leJeuDu21_UserControl1;
+        private LeJeuDu21_UserControl leJeuDu21_UserControl2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.Button BTN_IA2_Journal;
+        private System.Windows.Forms.Button BTN_IA1_Journal;
     }
 }

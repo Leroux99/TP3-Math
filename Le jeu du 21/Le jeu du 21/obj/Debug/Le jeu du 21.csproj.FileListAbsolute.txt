@@ -20,16 +20,3 @@ C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Form_Risque.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Properties.Resources.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.csproj.GenerateResource.Cache
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\bin\Debug\Le jeu du 21.exe.config
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.exe
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.pdb
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\bin\Debug\Le jeu du 21.exe
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\bin\Debug\Le jeu du 21.pdb
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.csprojResolveAssemblyReference.cache
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Form_Adversaire.resources
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Form_Jeu21.resources
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Form_Risque.resources
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Properties.Resources.resources
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.csproj.GenerateResource.Cache
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.LeJeuDu21_UserControl.resources
-C:\Users\DelaireY\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.View.Form_Log.resources

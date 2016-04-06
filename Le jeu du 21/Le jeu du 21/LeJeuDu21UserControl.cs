@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using Le_jeu_du_21.Model;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -20,8 +21,8 @@ namespace Le_jeu_du_21
         /// <summary>
         /// Image data into pixels of a card.
         /// </summary>
-        private const int largeurCarte = 73;
-        private const int HauteurCarte = 98;
+        private const int LARGEURCARTE = 73;
+        private const int HAUTEURCARTE = 98;
 
         /// <summary>
         /// How many cards each player in hand.
@@ -31,13 +32,18 @@ namespace Le_jeu_du_21
         /// <summary>
         /// Message Log During Game
         /// </summary>
-        private const string messageScore = "Votre score est de: ";
+        private const string messageScore = "Scores: ";
         private const string messageWave = "Tours: ";
 
         /// <summary>
         /// Bool AS 1 OR 11
         /// </summary>
         public bool BoolASValue { get; private set; }
+
+        /// <summary>
+        /// Send Score to Form_Jeu21
+        /// </summary>
+        public static string ScoreASValue { get; private set; }
 
         /// <summary>
         /// IF Player have a AS TO DO...
@@ -61,11 +67,18 @@ namespace Le_jeu_du_21
         public LeJeuDu21_UserControl()
         {
             InitializeComponent();
-            Cards_Hand = new List<Card>();
-            CardsPictures = new Bitmap("..\\..\\Resources\\card.png");
-            CardInPlayerHand = 0;
-            RefreshScore();
-            BoolASValue = false;
+            try
+            {
+                Cards_Hand = new List<Card>();
+                CardsPictures = new Bitmap(Properties.Resources.card);
+                CardInPlayerHand = 0;
+                RefreshScore();
+                BoolASValue = false;
+            }
+            catch (Exception exce)
+            {
+                MessageBox.Show(exce.ToString());
+            }
         }
 
         /// <summary>
@@ -77,7 +90,6 @@ namespace Le_jeu_du_21
             CardInPlayerHand = 0;
         }
 
-
         /// <summary>
         /// Randomly selected card and adds it to the hand of the player + displayed on the screen.
         /// </summary>
@@ -85,11 +97,11 @@ namespace Le_jeu_du_21
         {
             Cards_Hand.Add(card);
             PictureBox theCard = new PictureBox();
-            Rectangle DrawImage = new Rectangle(largeurCarte * (int)card.Valeur, HauteurCarte * (int)card.Type, largeurCarte, HauteurCarte);
+            Rectangle DrawImage = new Rectangle(LARGEURCARTE * (int)card.Valeur, HAUTEURCARTE * (int)card.Type, LARGEURCARTE, HAUTEURCARTE);
             theCard.Image = CardsPictures.Clone(DrawImage, System.Drawing.Imaging.PixelFormat.DontCare);
-            theCard.SetBounds(largeurCarte * CardInPlayerHand, 0, largeurCarte, HauteurCarte);
+            theCard.SetBounds(LARGEURCARTE * CardInPlayerHand, 0, LARGEURCARTE, HAUTEURCARTE);
             panel1.Controls.Add(theCard);
-            CardInPlayerHand++;
+            ++CardInPlayerHand;
             RefreshScore();
         }
 
@@ -104,7 +116,7 @@ namespace Le_jeu_du_21
                 Temp = card.Value;
                 if (Temp == 11)
                 {
-                    numberOfAs++;
+                    ++numberOfAs;
                 }
                 total += Temp;
             }
@@ -129,6 +141,7 @@ namespace Le_jeu_du_21
             {
                 result = total;
                 LBL_Score.Text = messageScore + total.ToString();
+                ScoreASValue = LBL_Score.Text;
             }
             return result;
         }

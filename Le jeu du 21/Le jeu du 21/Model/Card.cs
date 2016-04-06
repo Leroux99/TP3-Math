@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace Le_jeu_du_21.Model
+﻿namespace Le_jeu_du_21.Model
 {
     public class Card
     {
@@ -32,7 +30,7 @@ namespace Le_jeu_du_21.Model
         }
 
         /// <summary>
-        /// Construction de la Carte
+        /// Construction of the Card
         /// </summary>
         /// <param name="valeurC">Valeur de la Carte</param>
         /// /// <param name="typeC">Type de la Carte</param>
@@ -43,7 +41,7 @@ namespace Le_jeu_du_21.Model
         }
 
         /// <summary>
-        /// Envoie la Carte
+        /// Send The Card
         /// </summary>
         private int getValue()
         {
