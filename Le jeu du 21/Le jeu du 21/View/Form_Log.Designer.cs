@@ -28,42 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Log));
-            this.button_OK = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button_OK
-            // 
-            this.button_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_OK.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_OK.Location = new System.Drawing.Point(824, 218);
-            this.button_OK.Name = "button_OK";
-            this.button_OK.Size = new System.Drawing.Size(172, 45);
-            this.button_OK.TabIndex = 1;
-            this.button_OK.Text = "OK";
-            this.button_OK.UseVisualStyleBackColor = false;
-            // 
-            // Form_Log
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Le_jeu_du_21.Properties.Resources.wall;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1008, 275);
-            this.Controls.Add(this.button_OK);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form_Log";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Le jeu du 21 - Log";
-            this.ResumeLayout(false);
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Log));
+			this.button_OK = new System.Windows.Forms.Button();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.SuspendLayout();
+			// 
+			// button_OK
+			// 
+			this.button_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button_OK.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button_OK.Location = new System.Drawing.Point(824, 218);
+			this.button_OK.Name = "button_OK";
+			this.button_OK.Size = new System.Drawing.Size(172, 45);
+			this.button_OK.TabIndex = 1;
+			this.button_OK.Text = "OK";
+			this.button_OK.UseVisualStyleBackColor = false;
+			this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
+			// 
+			// textBox1
+			// 
+			this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+			this.textBox1.Location = new System.Drawing.Point(13, 13);
+			this.textBox1.Multiline = true;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.ReadOnly = true;
+			this.textBox1.Size = new System.Drawing.Size(983, 199);
+			this.textBox1.TabIndex = 2;
+			// 
+			// Form_Log
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = global::Le_jeu_du_21.Properties.Resources.wall;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.ClientSize = new System.Drawing.Size(1008, 275);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.button_OK);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
+			this.Name = "Form_Log";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.Text = "Le jeu du 21 - Log";
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button_OK;
-    }
+		private System.Windows.Forms.TextBox textBox1;
+	}
 }

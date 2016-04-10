@@ -20,3 +20,5 @@ C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Form_Risque.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.Properties.Resources.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le jeu du 21.csproj.GenerateResource.Cache
+C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.LeJeuDu21_UserControl.resources
+C:\Users\Leroux\Documents\GitHub\TP3-Math\Le jeu du 21\Le jeu du 21\obj\Debug\Le_jeu_du_21.View.Form_Log.resources

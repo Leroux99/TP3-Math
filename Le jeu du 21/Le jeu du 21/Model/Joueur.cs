@@ -9,12 +9,11 @@ namespace Le_jeu_du_21.Model
         /// </summary>
         public enum Risk_Level { Aucun, Standard = 40, Courageux = 50, Moyen = 65, Prudent = 80 }
         public LeJeuDu21_UserControl LJDUSER { get; set; }
-        public List<string> LJDUSER_Log { get; set; }
         public int totalScores { get { return LJDUSER.RefreshScore(); } set { LJDUSER.Reset(); } }
         public bool countCards { get; set; }
         public bool AI_Player { get; set; }
         public bool GameOver { get; set; }
-
+		public int NumeroJoueur { get; set; }
         /// <summary>
         /// Risk Level of AI
         /// </summary>
@@ -23,26 +22,27 @@ namespace Le_jeu_du_21.Model
         /// <summary>
         /// Constructor
         /// </summary>
-        public Joueur(LeJeuDu21_UserControl LJD_USER)
+        public Joueur()
         {
-            LJDUSER = LJD_USER;
             AI_Player = false;
             GameOver = false;
-            LJDUSER_Log = new List<string>();
         }
 
         /// <summary>
         /// Constructor with Risk and Card Number
         /// </summary>
-        public Joueur(LeJeuDu21_UserControl LJD_USER, Risk_Level risk_Level, bool count_Cards)
+        public Joueur(Risk_Level risk_Level, bool count_Cards)
         {
-            LJDUSER = LJD_USER;
-            risk_Level = riskLevel;
+            riskLevel = risk_Level;
             countCards = count_Cards;
             AI_Player = true;
             GameOver = false;
-            LJDUSER_Log = new List<string>();
         }
+
+		public void setUserControl(LeJeuDu21_UserControl LJD_USER)
+		{
+			LJDUSER = LJD_USER;
+		}
 
         /// <summary>
         /// AI Want Pick A Card ?!
@@ -74,7 +74,7 @@ namespace Le_jeu_du_21.Model
             {
                 message += ", donc je passe.";
             }
-            LJDUSER_Log.Add(message);
+            Jeu.Log.Add("Joueur " + NumeroJoueur + ": " + message);
         }
 
         /// <summary>
@@ -83,7 +83,13 @@ namespace Le_jeu_du_21.Model
         /// <param name="message">Le Message</param>
         public void AddToLog(string message)
         {
-            LJDUSER_Log.Add(message);
+            Jeu.Log.Add("Joueur " + NumeroJoueur + ": " + message);
         }
+
+		public void NewGame()
+		{
+			totalScores = 0;
+			GameOver = false;
+		}
     }
 }

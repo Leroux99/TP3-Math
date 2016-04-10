@@ -18,23 +18,19 @@ namespace Le_jeu_du_21.View
         public Form_Log(List<string> Actions)
         {
             InitializeComponent();
-            int count = 0;
 
-            foreach (string Line in Actions)
-            {
-                count++;
-                Label label = new Label();
-                label.AutoSize = true;
-                label.Text = count.ToString();
-                label.Location = new Point(distance, distance * count);
-                Controls.Add(label);
+            foreach (string Line in Actions) textBox1.Text += Line + "\r\n";
 
-                Label textLabel = new Label();
-                textLabel.AutoSize = true;
-                textLabel.Text = Line;
-                textLabel.Location = new Point(distance + distance, distance * count);
-                Controls.Add(textLabel);
-            }
         }
-    }
+
+		private void button_OK_Click(object sender, System.EventArgs e)
+		{
+			Close();
+		}
+
+		public void Clear()
+		{
+			textBox1.Text = "";
+		}
+	}
 }

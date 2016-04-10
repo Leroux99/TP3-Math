@@ -36,30 +36,9 @@ namespace Le_jeu_du_21
         private const string messageWave = "Tours: ";
 
         /// <summary>
-        /// Bool AS 1 OR 11
-        /// </summary>
-        public bool BoolASValue { get; private set; }
-
-        /// <summary>
         /// Send Score to Form_Jeu21
         /// </summary>
         public static string ScoreASValue { get; private set; }
-
-        /// <summary>
-        /// IF Player have a AS TO DO...
-        /// </summary>
-        public bool HaveAS
-        {
-            get
-            {
-                bool result = false;
-                foreach (Card card in Cards_Hand)
-                {
-                    result |= card.Value == 11;
-                }
-                return result;
-            }
-        }
 
         /// <summary>
         /// InitializeComponent
@@ -72,8 +51,7 @@ namespace Le_jeu_du_21
                 Cards_Hand = new List<Card>();
                 CardsPictures = new Bitmap(Properties.Resources.card);
                 CardInPlayerHand = 0;
-                RefreshScore();
-                BoolASValue = false;
+				RefreshScore();
             }
             catch (Exception exce)
             {
@@ -88,7 +66,9 @@ namespace Le_jeu_du_21
         {
             Cards_Hand.Clear();
             CardInPlayerHand = 0;
-        }
+			RefreshScore();
+			panel1.Controls.Clear();
+		}
 
         /// <summary>
         /// Randomly selected card and adds it to the hand of the player + displayed on the screen.
@@ -110,40 +90,23 @@ namespace Le_jeu_du_21
         /// </summary>
         public int RefreshScore()
         {
-            int scorePlayer1, scorePlayer2; int Temp; int numberOfAs = 0; int result = 0; int total = 0; const int ASSCORE = 10;
+			int Temp;
+			int Score = 0;
             foreach (Card card in Cards_Hand)
             {
                 Temp = card.Value;
                 if (Temp == 11)
                 {
-                    ++numberOfAs;
+					if (Score <= 10) Score += Temp;
+					else Score += 1;
                 }
-                total += Temp;
+				else Score += Temp;  
             }
-            if (numberOfAs > 0)
-            {
-                scorePlayer1 = (total - (numberOfAs * ASSCORE));
-                scorePlayer2 = total;
-                LBL_Score.Text = messageScore + scorePlayer1.ToString() + " ou " + scorePlayer2.ToString();
-
-                if (scorePlayer1 > 21 && scorePlayer2 > 21)
-                {
-                    result = scorePlayer1 < scorePlayer2 ? scorePlayer1 : scorePlayer2;
-                }
-                else if (scorePlayer1 <= 21 && scorePlayer2 > 21)
-                {
-                    result = scorePlayer1;
-                    BoolASValue = true;
-                }
-                else result = scorePlayer2;
-            }
-            else
-            {
-                result = total;
-                LBL_Score.Text = messageScore + total.ToString();
+                     
+                LBL_Score.Text = messageScore + Score.ToString();
                 ScoreASValue = LBL_Score.Text;
-            }
-            return result;
+            
+            return Score;
         }
     }
 }
