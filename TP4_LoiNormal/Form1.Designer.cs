@@ -36,13 +36,13 @@
 			this.textBox_Max = new System.Windows.Forms.TextBox();
 			this.textBox_ET = new System.Windows.Forms.TextBox();
 			this.textBox_Prob = new System.Windows.Forms.TextBox();
-			this.checkBox_Min = new System.Windows.Forms.CheckBox();
-			this.checkBox_Max = new System.Windows.Forms.CheckBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
 			// button_Calculer
@@ -89,22 +89,6 @@
 			resources.ApplyResources(this.textBox_Prob, "textBox_Prob");
 			this.textBox_Prob.Name = "textBox_Prob";
 			// 
-			// checkBox_Min
-			// 
-			resources.ApplyResources(this.checkBox_Min, "checkBox_Min");
-			this.checkBox_Min.BackColor = System.Drawing.Color.Transparent;
-			this.checkBox_Min.ForeColor = System.Drawing.Color.White;
-			this.checkBox_Min.Name = "checkBox_Min";
-			this.checkBox_Min.UseVisualStyleBackColor = false;
-			// 
-			// checkBox_Max
-			// 
-			resources.ApplyResources(this.checkBox_Max, "checkBox_Max");
-			this.checkBox_Max.BackColor = System.Drawing.Color.Transparent;
-			this.checkBox_Max.ForeColor = System.Drawing.Color.White;
-			this.checkBox_Max.Name = "checkBox_Max";
-			this.checkBox_Max.UseVisualStyleBackColor = false;
-			// 
 			// label1
 			// 
 			resources.ApplyResources(this.label1, "label1");
@@ -140,18 +124,36 @@
 			this.label5.ForeColor = System.Drawing.Color.White;
 			this.label5.Name = "label5";
 			// 
+			// label6
+			// 
+			resources.ApplyResources(this.label6, "label6");
+			this.label6.BackColor = System.Drawing.Color.Transparent;
+			this.label6.ForeColor = System.Drawing.Color.White;
+			this.label6.Name = "label6";
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
+			resources.ApplyResources(this.comboBox1, "comboBox1");
+			this.comboBox1.Name = "comboBox1";
+			// 
 			// Form_Main
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::TP4_LoiNormal.Properties.Resources.relativity_00447991;
+			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.checkBox_Max);
-			this.Controls.Add(this.checkBox_Min);
 			this.Controls.Add(this.textBox_Prob);
 			this.Controls.Add(this.textBox_ET);
 			this.Controls.Add(this.textBox_Max);
@@ -178,13 +180,13 @@
         private System.Windows.Forms.TextBox textBox_Max;
         private System.Windows.Forms.TextBox textBox_ET;
         private System.Windows.Forms.TextBox textBox_Prob;
-        private System.Windows.Forms.CheckBox checkBox_Min;
-        private System.Windows.Forms.CheckBox checkBox_Max;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-    }
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.ComboBox comboBox1;
+	}
 }
 

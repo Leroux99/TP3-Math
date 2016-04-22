@@ -54,7 +54,8 @@ namespace TP4_LoiNormal
         public Form_Main()
         {
             InitializeComponent();
-        }
+			comboBox1.SelectedIndex = 0;
+		}
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
