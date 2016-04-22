@@ -90,10 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Guillendesign-Variations-3-Calculator.ico" />
+    <None Include="Resources\relativity_00447991.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\relativity_00447991.jpg" />
+    <Content Include="Resources\fetch.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
