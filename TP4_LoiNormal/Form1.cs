@@ -57,6 +57,8 @@ namespace TP4_LoiNormal
 			comboBox1.SelectedIndex = 0;
 		}
 
+		//Se déclenche lorsque l'utilisateur pèse sur Réinitialiser
+		//Efface tout ce qui a été entré
 		private void button_Réinitialiser_Click(object sender, EventArgs e)
         {
 			numericUpDown_A.Value = 0;
@@ -67,6 +69,8 @@ namespace TP4_LoiNormal
 			comboBox1.SelectedIndex = 0;
 		}
 
+		//Se déclenche lorsque l'utilisateur pèse sur Calculer
+		//Choisis la bonne fonction en fonction du choix de l'utilisateur
 		private void button_Calculer_Click(object sender, EventArgs e)
 		{
 			if (comboBox1.SelectedItem.ToString() == "P(a < X < b)") Intervale();			  
@@ -74,31 +78,16 @@ namespace TP4_LoiNormal
 			else if (comboBox1.SelectedItem.ToString() == "P(X > a)") Superieure();
 		}
 
-		private void Intervale()
+		private void Intervale() //fonction pour calculer la probabilité d'être à l'intérieur d'une intervalle
 		{
-			getProbabilite(new double[]
+			double[] CoteZs = new double[]
 			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
-			Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)});
-		}
+			Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)};
 
-		private void Inferieure()
-		{
-			getProbabilite(new double[]
-			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), -4.09 });
-		}
-
-		private void Superieure()
-		{
-			getProbabilite(new double[]
-			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), 4.09 });
-		}
-
-		private void getProbabilite(double[] Intervale)
-		{
 			double Probabilite = 0;
 			int X, Y;
 
-			foreach (double d in Intervale)
+			foreach (double d in CoteZs)
 			{
 				Y = (int)(d * 100) - ((int)(d * 100) / 10) * 10; ;
 				X = (int)(d * 10);
@@ -106,17 +95,51 @@ namespace TP4_LoiNormal
 				if (X < 0) X *= -1;
 				if (Y < 0) Y *= -1;
 
-				Probabilite += Table[X, Y];
+				if(Probabilite <= 0) Probabilite += Table[X, Y];
+				else Probabilite -= Table[X, Y];
 			}
+			if (Probabilite < 0) Probabilite *= -1;
 			AfficherProb(Probabilite);
 		}
 
-		private void AfficherProb(double probabilite)
+		private void Inferieure() //fonction pour calculer la probabilité d'être inférieur à une valeur
 		{
-			textBox_Prob.Text =probabilite * 100 + "%";
+			double CoteZ = Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
+			double Probabilite = 0.5;
+			int X, Y;
+			
+			Y = (int)(CoteZ * 100) - ((int)(CoteZ * 100) / 10) * 10; ;
+			X = (int)(CoteZ * 10);
+
+			if (X < 0) X *= -1;
+			if (Y < 0) Y *= -1;
+			if(CoteZ < 0) Probabilite -= Table[X, Y];
+			else Probabilite += Table[X, Y];
+			AfficherProb(Probabilite);
 		}
 
-		private void DotToComma(object sender, KeyPressEventArgs e)
+		private void Superieure() //fonction pour calculer la probabilité d'être supérieur à une valeur
+		{
+			double CoteZ = Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
+			double Probabilite = 0.5;
+			int X, Y;
+
+			Y = (int)(CoteZ * 100) - ((int)(CoteZ * 100) / 10) * 10; ;
+			X = (int)(CoteZ * 10);
+
+			if (X < 0) X *= -1;
+			if (Y < 0) Y *= -1;
+			if (CoteZ > 0) Probabilite -= Table[X, Y];
+			else Probabilite += Table[X, Y];
+			AfficherProb(Probabilite);
+		}
+
+		private void AfficherProb(double probabilite) //fonction qui affiche la probabilité
+		{
+			textBox_Prob.Text =probabilite + "  ou  " + probabilite * 100 + "%";
+		}
+
+		private void DotToComma(object sender, KeyPressEventArgs e) //Event qui change un point pour une virgule
 		{
 			if (e.KeyChar.Equals('.'))
 			{

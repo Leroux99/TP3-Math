@@ -13,15 +13,3 @@ c:\users\delairey\documents\visual studio 2015\Projects\TP4_LoiNormal\obj\Debug\
 c:\users\delairey\documents\visual studio 2015\Projects\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.Form_Main.fr.resources
 c:\users\delairey\documents\visual studio 2015\Projects\TP4_LoiNormal\obj\Debug\fr-DZ\TP4_LoiNormal.resources.dll
 c:\users\delairey\documents\visual studio 2015\Projects\TP4_LoiNormal\obj\Debug\fr\TP4_LoiNormal.resources.dll
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Debug\TP4_LoiNormal.exe
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Debug\TP4_LoiNormal.exe.config
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Debug\TP4_LoiNormal.pdb
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.csprojResolveAssemblyReference.cache
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.Form_Main.resources
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.Properties.Resources.resources
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.csproj.GenerateResource.Cache
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.exe
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.pdb
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Debug\en-US\TP4_LoiNormal.resources.dll
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.Form_Main.en-US.resources
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\en-US\TP4_LoiNormal.resources.dll
