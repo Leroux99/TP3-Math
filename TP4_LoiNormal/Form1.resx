@@ -316,7 +316,7 @@
     <value>Flat</value>
   </data>
   <data name="checkBox_Max.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 110</value>
+    <value>406, 110</value>
   </data>
   <data name="checkBox_Max.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 25</value>
