@@ -31,10 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
 			this.button_Calculer = new System.Windows.Forms.Button();
 			this.button_Réinitialiser = new System.Windows.Forms.Button();
-			this.textBox_Min = new System.Windows.Forms.TextBox();
-			this.textBox_Moy = new System.Windows.Forms.TextBox();
-			this.textBox_Max = new System.Windows.Forms.TextBox();
-			this.textBox_ET = new System.Windows.Forms.TextBox();
 			this.textBox_Prob = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +39,14 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.numericUpDown_A = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown_B = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown_Moyenne = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown_ET = new System.Windows.Forms.NumericUpDown();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_A)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_B)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Moyenne)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ET)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button_Calculer
@@ -59,35 +63,13 @@
 			this.button_Réinitialiser.UseVisualStyleBackColor = true;
 			this.button_Réinitialiser.Click += new System.EventHandler(this.button_Réinitialiser_Click);
 			// 
-			// textBox_Min
-			// 
-			this.textBox_Min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			resources.ApplyResources(this.textBox_Min, "textBox_Min");
-			this.textBox_Min.Name = "textBox_Min";
-			// 
-			// textBox_Moy
-			// 
-			this.textBox_Moy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			resources.ApplyResources(this.textBox_Moy, "textBox_Moy");
-			this.textBox_Moy.Name = "textBox_Moy";
-			// 
-			// textBox_Max
-			// 
-			this.textBox_Max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			resources.ApplyResources(this.textBox_Max, "textBox_Max");
-			this.textBox_Max.Name = "textBox_Max";
-			// 
-			// textBox_ET
-			// 
-			this.textBox_ET.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			resources.ApplyResources(this.textBox_ET, "textBox_ET");
-			this.textBox_ET.Name = "textBox_ET";
-			// 
 			// textBox_Prob
 			// 
+			this.textBox_Prob.BackColor = System.Drawing.SystemColors.Window;
 			this.textBox_Prob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			resources.ApplyResources(this.textBox_Prob, "textBox_Prob");
 			this.textBox_Prob.Name = "textBox_Prob";
+			this.textBox_Prob.ReadOnly = true;
 			// 
 			// label1
 			// 
@@ -142,11 +124,83 @@
 			resources.ApplyResources(this.comboBox1, "comboBox1");
 			this.comboBox1.Name = "comboBox1";
 			// 
+			// numericUpDown_A
+			// 
+			this.numericUpDown_A.DecimalPlaces = 2;
+			this.numericUpDown_A.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+			resources.ApplyResources(this.numericUpDown_A, "numericUpDown_A");
+			this.numericUpDown_A.Maximum = new decimal(new int[] {
+            409,
+            0,
+            0,
+            131072});
+			this.numericUpDown_A.Minimum = new decimal(new int[] {
+            409,
+            0,
+            0,
+            -2147352576});
+			this.numericUpDown_A.Name = "numericUpDown_A";
+			this.numericUpDown_A.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			// 
+			// numericUpDown_B
+			// 
+			this.numericUpDown_B.DecimalPlaces = 2;
+			this.numericUpDown_B.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+			resources.ApplyResources(this.numericUpDown_B, "numericUpDown_B");
+			this.numericUpDown_B.Maximum = new decimal(new int[] {
+            409,
+            0,
+            0,
+            131072});
+			this.numericUpDown_B.Minimum = new decimal(new int[] {
+            409,
+            0,
+            0,
+            -2147352576});
+			this.numericUpDown_B.Name = "numericUpDown_B";
+			this.numericUpDown_B.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			// 
+			// numericUpDown_Moyenne
+			// 
+			this.numericUpDown_Moyenne.DecimalPlaces = 2;
+			this.numericUpDown_Moyenne.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+			resources.ApplyResources(this.numericUpDown_Moyenne, "numericUpDown_Moyenne");
+			this.numericUpDown_Moyenne.Name = "numericUpDown_Moyenne";
+			this.numericUpDown_Moyenne.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			// 
+			// numericUpDown_ET
+			// 
+			this.numericUpDown_ET.DecimalPlaces = 2;
+			this.numericUpDown_ET.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+			resources.ApplyResources(this.numericUpDown_ET, "numericUpDown_ET");
+			this.numericUpDown_ET.Name = "numericUpDown_ET";
+			this.numericUpDown_ET.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			// 
 			// Form_Main
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::TP4_LoiNormal.Properties.Resources.relativity_00447991;
+			this.Controls.Add(this.numericUpDown_ET);
+			this.Controls.Add(this.numericUpDown_Moyenne);
+			this.Controls.Add(this.numericUpDown_B);
+			this.Controls.Add(this.numericUpDown_A);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
@@ -155,17 +209,16 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox_Prob);
-			this.Controls.Add(this.textBox_ET);
-			this.Controls.Add(this.textBox_Max);
-			this.Controls.Add(this.textBox_Moy);
-			this.Controls.Add(this.textBox_Min);
 			this.Controls.Add(this.button_Réinitialiser);
 			this.Controls.Add(this.button_Calculer);
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "Form_Main";
-			this.Load += new System.EventHandler(this.Form_Main_Load);
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_A)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_B)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Moyenne)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ET)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -175,10 +228,6 @@
 
         private System.Windows.Forms.Button button_Calculer;
         private System.Windows.Forms.Button button_Réinitialiser;
-        private System.Windows.Forms.TextBox textBox_Min;
-        private System.Windows.Forms.TextBox textBox_Moy;
-        private System.Windows.Forms.TextBox textBox_Max;
-        private System.Windows.Forms.TextBox textBox_ET;
         private System.Windows.Forms.TextBox textBox_Prob;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -187,6 +236,10 @@
         private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.NumericUpDown numericUpDown_A;
+		private System.Windows.Forms.NumericUpDown numericUpDown_B;
+		private System.Windows.Forms.NumericUpDown numericUpDown_Moyenne;
+		private System.Windows.Forms.NumericUpDown numericUpDown_ET;
 	}
 }
 

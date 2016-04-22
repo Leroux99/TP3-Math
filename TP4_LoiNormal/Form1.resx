@@ -130,7 +130,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_Calculer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="button_Calculer.Text" xml:space="preserve">
     <value>Calculer</value>
@@ -157,7 +157,7 @@
     <value>144, 45</value>
   </data>
   <data name="button_Réinitialiser.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="button_Réinitialiser.Text" xml:space="preserve">
     <value>Réinitialiser</value>
@@ -174,92 +174,8 @@
   <data name="&gt;&gt;button_Réinitialiser.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="textBox_Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 62</value>
-  </data>
-  <data name="textBox_Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
-  </data>
-  <data name="textBox_Min.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox_Min.Name" xml:space="preserve">
-    <value>textBox_Min</value>
-  </data>
-  <data name="&gt;&gt;textBox_Min.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_Min.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox_Min.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="textBox_Moy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 132</value>
-  </data>
-  <data name="textBox_Moy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
-  </data>
-  <data name="textBox_Moy.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBox_Moy.Name" xml:space="preserve">
-    <value>textBox_Moy</value>
-  </data>
-  <data name="&gt;&gt;textBox_Moy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_Moy.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox_Moy.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="textBox_Max.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 97</value>
-  </data>
-  <data name="textBox_Max.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
-  </data>
-  <data name="textBox_Max.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBox_Max.Name" xml:space="preserve">
-    <value>textBox_Max</value>
-  </data>
-  <data name="&gt;&gt;textBox_Max.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_Max.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox_Max.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="textBox_ET.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 167</value>
-  </data>
-  <data name="textBox_ET.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
-  </data>
-  <data name="textBox_ET.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBox_ET.Name" xml:space="preserve">
-    <value>textBox_ET</value>
-  </data>
-  <data name="&gt;&gt;textBox_ET.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_ET.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox_ET.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="textBox_Prob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 247</value>
+    <value>145, 247</value>
   </data>
   <data name="textBox_Prob.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 29</value>
@@ -277,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_Prob.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -304,7 +220,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -334,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -364,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -394,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -424,7 +340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -454,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="comboBox1.Items" xml:space="preserve">
     <value>P(a &lt; X &lt; b)</value>
@@ -466,13 +382,13 @@
     <value>P(X &gt; a)</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 203</value>
+    <value>146, 203</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 29</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
     <value>comboBox1</value>
@@ -484,6 +400,90 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericUpDown_A.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 62</value>
+  </data>
+  <data name="numericUpDown_A.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 29</value>
+  </data>
+  <data name="numericUpDown_A.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_A.Name" xml:space="preserve">
+    <value>numericUpDown_A</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_A.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_A.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_A.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_B.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 97</value>
+  </data>
+  <data name="numericUpDown_B.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 29</value>
+  </data>
+  <data name="numericUpDown_B.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_B.Name" xml:space="preserve">
+    <value>numericUpDown_B</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_B.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_B.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_B.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown_Moyenne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 132</value>
+  </data>
+  <data name="numericUpDown_Moyenne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 29</value>
+  </data>
+  <data name="numericUpDown_Moyenne.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Moyenne.Name" xml:space="preserve">
+    <value>numericUpDown_Moyenne</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Moyenne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Moyenne.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Moyenne.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_ET.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 167</value>
+  </data>
+  <data name="numericUpDown_ET.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 29</value>
+  </data>
+  <data name="numericUpDown_ET.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ET.Name" xml:space="preserve">
+    <value>numericUpDown_ET</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ET.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ET.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ET.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

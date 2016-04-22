@@ -22,3 +22,6 @@ C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.csproj.GenerateResource.Cache
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.exe
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.pdb
+C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Debug\en-US\TP4_LoiNormal.resources.dll
+C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\TP4_LoiNormal.Form_Main.en-US.resources
+C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Debug\en-US\TP4_LoiNormal.resources.dll
