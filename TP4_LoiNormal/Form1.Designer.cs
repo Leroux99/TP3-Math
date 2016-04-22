@@ -50,6 +50,7 @@
 			resources.ApplyResources(this.button_Calculer, "button_Calculer");
 			this.button_Calculer.Name = "button_Calculer";
 			this.button_Calculer.UseVisualStyleBackColor = true;
+			this.button_Calculer.Click += new System.EventHandler(this.button_Calculer_Click);
 			// 
 			// button_Réinitialiser
 			// 
