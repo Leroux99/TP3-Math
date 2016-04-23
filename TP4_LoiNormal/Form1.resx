@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_Calculer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 223</value>
+    <value>133, 223</value>
   </data>
   <data name="button_Calculer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 45</value>
+    <value>115, 45</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_Calculer.TabIndex" type="System.Int32, mscorlib">
@@ -160,7 +160,7 @@
     <value>12, 223</value>
   </data>
   <data name="button_Réinitialiser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 45</value>
+    <value>115, 45</value>
   </data>
   <data name="button_Réinitialiser.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -184,10 +184,10 @@
     <value>12</value>
   </data>
   <data name="textBox_Prob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 188</value>
+    <value>133, 188</value>
   </data>
   <data name="textBox_Prob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="textBox_Prob.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -208,10 +208,10 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 14</value>
+    <value>110, 14</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 21</value>
+    <value>18, 21</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -241,7 +241,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 49</value>
+    <value>108, 49</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 21</value>
@@ -274,10 +274,10 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 84</value>
+    <value>48, 84</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
+    <value>79, 21</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -308,10 +308,10 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 119</value>
+    <value>42, 119</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -341,10 +341,10 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 190</value>
+    <value>37, 190</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 21</value>
+    <value>90, 21</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -374,10 +374,10 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 156</value>
+    <value>92, 156</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 21</value>
+    <value>35, 21</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -412,10 +412,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>P(X &gt; a)</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 153</value>
+    <value>133, 153</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -433,10 +433,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>4</value>
   </data>
   <data name="numericUpDown_A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 12</value>
+    <value>133, 12</value>
   </data>
   <data name="numericUpDown_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="numericUpDown_A.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -454,10 +454,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>3</value>
   </data>
   <data name="numericUpDown_B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 47</value>
+    <value>133, 47</value>
   </data>
   <data name="numericUpDown_B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="numericUpDown_B.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -475,10 +475,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>2</value>
   </data>
   <data name="numericUpDown_Moyenne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 82</value>
+    <value>133, 82</value>
   </data>
   <data name="numericUpDown_Moyenne.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="numericUpDown_Moyenne.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -496,10 +496,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>1</value>
   </data>
   <data name="numericUpDown_ET.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 117</value>
+    <value>133, 117</value>
   </data>
   <data name="numericUpDown_ET.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>115, 29</value>
   </data>
   <data name="numericUpDown_ET.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -523,10 +523,10 @@ P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>308, 278</value>
+    <value>260, 280</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Black, 12pt, style=Bold</value>
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

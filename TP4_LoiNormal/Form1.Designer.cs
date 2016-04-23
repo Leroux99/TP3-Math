@@ -61,6 +61,7 @@
 			// 
 			// button_Réinitialiser
 			// 
+			this.button_Réinitialiser.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			resources.ApplyResources(this.button_Réinitialiser, "button_Réinitialiser");
 			this.button_Réinitialiser.Name = "button_Réinitialiser";
 			this.button_Réinitialiser.TabStop = false;
