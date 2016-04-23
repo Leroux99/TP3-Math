@@ -63,9 +63,9 @@ namespace TP4_LoiNormal.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         /// </summary>
-        internal static System.Drawing.Icon fetch {
+        internal static System.Drawing.Icon Icone__1_ {
             get {
-                object obj = ResourceManager.GetObject("fetch", resourceCulture);
+                object obj = ResourceManager.GetObject("Icone__1_", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
