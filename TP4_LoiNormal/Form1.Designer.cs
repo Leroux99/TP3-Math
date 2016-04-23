@@ -189,7 +189,17 @@
             0,
             131072});
 			resources.ApplyResources(this.numericUpDown_ET, "numericUpDown_ET");
+			this.numericUpDown_ET.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
 			this.numericUpDown_ET.Name = "numericUpDown_ET";
+			this.numericUpDown_ET.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
 			this.numericUpDown_ET.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
 			// 
 			// Form_Main

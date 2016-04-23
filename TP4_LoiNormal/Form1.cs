@@ -81,11 +81,14 @@ namespace TP4_LoiNormal
 		private void Intervale() //fonction pour calculer la probabilité d'être à l'intérieur d'une intervalle
 		{
 			bool sameSide = false;
-			double[] CoteZs = new double[]
-			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
-			Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)};
+			double ValeurA = Convert.ToDouble(numericUpDown_A.Value);
+			double ValeurB = Convert.ToDouble(numericUpDown_B.Value);
 
-			if ((CoteZs[0] < 0 && CoteZs[1] < 0) || (CoteZs[0] > 0 && CoteZs[1] > 0)) sameSide = true;
+			if ((ValeurA < 0 && ValeurB < 0) || (ValeurA > 0 && ValeurB > 0)) sameSide = true;
+
+			double[] CoteZs = new double[]
+			{Convert.ToDouble((numericUpDown_A.Value * numericUpDown_ET.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
+			Convert.ToDouble((numericUpDown_B.Value * numericUpDown_ET.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)};
 
 			double Probabilite = 0;
 			int X, Y;
@@ -97,6 +100,7 @@ namespace TP4_LoiNormal
 
 				if (X < 0) X *= -1;
 				if (Y < 0) Y *= -1;
+				if (X > 41) X = 40;
 
 				if(sameSide)
 				{
@@ -111,39 +115,42 @@ namespace TP4_LoiNormal
 
 		private void Inferieure() //fonction pour calculer la probabilité d'être inférieur à une valeur
 		{
-			double CoteZ = Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
+			double CoteZ = Convert.ToDouble((numericUpDown_A.Value * numericUpDown_ET.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
 			double Probabilite = 0.5;
 			int X, Y;
 			
 			Y = (int)(CoteZ * 100) - ((int)(CoteZ * 100) / 10) * 10; ;
 			X = (int)(CoteZ * 10);
+			if (X > 41) X = 40;
+
 
 			if (X < 0) X *= -1;
 			if (Y < 0) Y *= -1;
-			if(CoteZ < 0) Probabilite -= Table[X, Y];
+			if(numericUpDown_A.Value < 0) Probabilite -= Table[X, Y];
 			else Probabilite += Table[X, Y];
 			AfficherProb((float)Probabilite);
 		}
 
 		private void Superieure() //fonction pour calculer la probabilité d'être supérieur à une valeur
 		{
-			double CoteZ = Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
+			double CoteZ = Convert.ToDouble((numericUpDown_A.Value * numericUpDown_ET.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value);
 			double Probabilite = 0.5;
 			int X, Y;
 
 			Y = (int)(CoteZ * 100) - ((int)(CoteZ * 100) / 10) * 10; ;
 			X = (int)(CoteZ * 10);
+			if (X > 41) X = 40;
 
 			if (X < 0) X *= -1;
 			if (Y < 0) Y *= -1;
-			if (CoteZ > 0) Probabilite -= Table[X, Y];
+			if (numericUpDown_A.Value > 0) Probabilite -= Table[X, Y];
 			else Probabilite += Table[X, Y];
 			AfficherProb((float)Probabilite);
 		}
 
 		private void AfficherProb(float probabilite) //fonction qui affiche la probabilité
 		{
-			textBox_Prob.Text =probabilite + "  ou  " + probabilite * 100 + "%";
+			textBox_Prob.Text = "" + probabilite;
 		}
 
 		private void DotToComma(object sender, KeyPressEventArgs e) //Event qui change un point pour une virgule
