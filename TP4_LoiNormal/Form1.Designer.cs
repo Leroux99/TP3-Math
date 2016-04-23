@@ -58,8 +58,10 @@
 			// 
 			// button_Réinitialiser
 			// 
+			this.button_Réinitialiser.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			resources.ApplyResources(this.button_Réinitialiser, "button_Réinitialiser");
 			this.button_Réinitialiser.Name = "button_Réinitialiser";
+			this.button_Réinitialiser.TabStop = false;
 			this.button_Réinitialiser.UseVisualStyleBackColor = true;
 			this.button_Réinitialiser.Click += new System.EventHandler(this.button_Réinitialiser_Click);
 			// 
@@ -70,47 +72,48 @@
 			resources.ApplyResources(this.textBox_Prob, "textBox_Prob");
 			this.textBox_Prob.Name = "textBox_Prob";
 			this.textBox_Prob.ReadOnly = true;
+			this.textBox_Prob.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_Prob_MouseDown);
 			// 
 			// label1
 			// 
 			resources.ApplyResources(this.label1, "label1");
 			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.ForeColor = System.Drawing.Color.Black;
 			this.label1.Name = "label1";
 			// 
 			// label2
 			// 
 			resources.ApplyResources(this.label2, "label2");
 			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.ForeColor = System.Drawing.Color.Black;
 			this.label2.Name = "label2";
 			// 
 			// label3
 			// 
 			resources.ApplyResources(this.label3, "label3");
 			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.ForeColor = System.Drawing.Color.White;
+			this.label3.ForeColor = System.Drawing.Color.Black;
 			this.label3.Name = "label3";
 			// 
 			// label4
 			// 
 			resources.ApplyResources(this.label4, "label4");
 			this.label4.BackColor = System.Drawing.Color.Transparent;
-			this.label4.ForeColor = System.Drawing.Color.White;
+			this.label4.ForeColor = System.Drawing.Color.Black;
 			this.label4.Name = "label4";
 			// 
 			// label5
 			// 
 			resources.ApplyResources(this.label5, "label5");
 			this.label5.BackColor = System.Drawing.Color.Transparent;
-			this.label5.ForeColor = System.Drawing.Color.White;
+			this.label5.ForeColor = System.Drawing.Color.Black;
 			this.label5.Name = "label5";
 			// 
 			// label6
 			// 
 			resources.ApplyResources(this.label6, "label6");
 			this.label6.BackColor = System.Drawing.Color.Transparent;
-			this.label6.ForeColor = System.Drawing.Color.White;
+			this.label6.ForeColor = System.Drawing.Color.Black;
 			this.label6.Name = "label6";
 			// 
 			// comboBox1
@@ -144,7 +147,9 @@
             0,
             -2147352576});
 			this.numericUpDown_A.Name = "numericUpDown_A";
+			this.numericUpDown_A.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_A.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			this.numericUpDown_A.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_B
 			// 
@@ -166,7 +171,9 @@
             0,
             -2147352576});
 			this.numericUpDown_B.Name = "numericUpDown_B";
+			this.numericUpDown_B.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_B.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			this.numericUpDown_B.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_Moyenne
 			// 
@@ -178,7 +185,9 @@
             131072});
 			resources.ApplyResources(this.numericUpDown_Moyenne, "numericUpDown_Moyenne");
 			this.numericUpDown_Moyenne.Name = "numericUpDown_Moyenne";
+			this.numericUpDown_Moyenne.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_Moyenne.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			this.numericUpDown_Moyenne.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_ET
 			// 
@@ -200,13 +209,16 @@
             0,
             0,
             131072});
+			this.numericUpDown_ET.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_ET.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
+			this.numericUpDown_ET.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// Form_Main
 			// 
+			this.AcceptButton = this.button_Calculer;
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::TP4_LoiNormal.Properties.Resources.relativity_00447991;
+			this.CancelButton = this.button_Réinitialiser;
 			this.Controls.Add(this.numericUpDown_ET);
 			this.Controls.Add(this.numericUpDown_Moyenne);
 			this.Controls.Add(this.numericUpDown_B);
@@ -223,6 +235,7 @@
 			this.Controls.Add(this.button_Calculer);
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.Name = "Form_Main";
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_A)).EndInit();

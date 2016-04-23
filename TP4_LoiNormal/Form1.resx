@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_Calculer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 308</value>
+    <value>156, 223</value>
   </data>
   <data name="button_Calculer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 45</value>
+    <value>138, 45</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_Calculer.TabIndex" type="System.Int32, mscorlib">
@@ -151,10 +151,10 @@
     <value>Flat</value>
   </data>
   <data name="button_Réinitialiser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 359</value>
+    <value>12, 223</value>
   </data>
   <data name="button_Réinitialiser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 45</value>
+    <value>138, 45</value>
   </data>
   <data name="button_Réinitialiser.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -175,10 +175,10 @@
     <value>12</value>
   </data>
   <data name="textBox_Prob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 247</value>
+    <value>156, 188</value>
   </data>
   <data name="textBox_Prob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="textBox_Prob.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -199,7 +199,7 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 64</value>
+    <value>131, 14</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 21</value>
@@ -229,7 +229,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 99</value>
+    <value>130, 49</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 21</value>
@@ -259,7 +259,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 134</value>
+    <value>67, 84</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 21</value>
@@ -289,7 +289,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 169</value>
+    <value>58, 119</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 21</value>
@@ -319,7 +319,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 249</value>
+    <value>53, 190</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 21</value>
@@ -349,7 +349,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 206</value>
+    <value>113, 156</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 21</value>
@@ -382,10 +382,10 @@
     <value>P(X &gt; a)</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 203</value>
+    <value>156, 153</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -403,10 +403,10 @@
     <value>4</value>
   </data>
   <data name="numericUpDown_A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 62</value>
+    <value>156, 12</value>
   </data>
   <data name="numericUpDown_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="numericUpDown_A.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -424,10 +424,10 @@
     <value>3</value>
   </data>
   <data name="numericUpDown_B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 97</value>
+    <value>156, 47</value>
   </data>
   <data name="numericUpDown_B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="numericUpDown_B.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -445,10 +445,10 @@
     <value>2</value>
   </data>
   <data name="numericUpDown_Moyenne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 132</value>
+    <value>156, 82</value>
   </data>
   <data name="numericUpDown_Moyenne.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="numericUpDown_Moyenne.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -466,10 +466,10 @@
     <value>1</value>
   </data>
   <data name="numericUpDown_ET.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 167</value>
+    <value>156, 117</value>
   </data>
   <data name="numericUpDown_ET.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
+    <value>138, 29</value>
   </data>
   <data name="numericUpDown_ET.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -496,7 +496,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>582, 421</value>
+    <value>308, 278</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Black, 12pt, style=Bold</value>
@@ -598,12 +598,6 @@
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>598, 460</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>598, 460</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

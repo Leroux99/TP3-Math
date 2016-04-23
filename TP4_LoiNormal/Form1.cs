@@ -64,7 +64,7 @@ namespace TP4_LoiNormal
 			numericUpDown_A.Value = 0;
 			numericUpDown_B.Value = 0;
 			numericUpDown_Moyenne.Value = 0;
-			numericUpDown_ET.Value = 0;
+			numericUpDown_ET.Value = numericUpDown_ET.Minimum;
 			textBox_Prob.Text = "";
 			comboBox1.SelectedIndex = 0;
 		}
@@ -163,6 +163,30 @@ namespace TP4_LoiNormal
 			{
 				e.KeyChar = (System.Globalization.CultureInfo.CurrentCulture).NumberFormat.NumberDecimalSeparator.ToCharArray()[0];
 			}
+		}
+
+		//fonction qui surligne tout le texte d'un numericupdown lorsque l'utilisateur l'atteint avec TAB
+		private void SelectAllTextWithTab(object sender, EventArgs e)
+		{
+			NumericUpDown curBox = sender as NumericUpDown;
+			curBox.Select();
+			curBox.Select(0, curBox.Text.Length);
+		}
+
+		//fonction qui surligne tout le texte d'un numericupdown lorsque l'utilisateur clique sur le controle
+		private void SelectAllTextWithMouse(object sender, MouseEventArgs e)
+		{
+			NumericUpDown curBox = sender as NumericUpDown;
+			curBox.Select(0, curBox.Text.Length);
+		}
+
+		//fonction qui surligne tout le texte de la sortie de la variable probabilité. 
+		//Met aussi la valeur de la variable de probabilité dans le presse papier
+		//il est donc inutile de copier la valeur
+		private void textBox_Prob_MouseDown(object sender, MouseEventArgs e)
+		{
+			textBox_Prob.Select(0, textBox_Prob.Text.Length);
+			if(textBox_Prob.Text.Length > 0) Clipboard.SetText(textBox_Prob.Text);
 		}
 	}
 }
