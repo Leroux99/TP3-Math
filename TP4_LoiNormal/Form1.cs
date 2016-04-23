@@ -73,7 +73,11 @@ namespace TP4_LoiNormal
 		//Choisis la bonne fonction en fonction du choix de l'utilisateur
 		private void button_Calculer_Click(object sender, EventArgs e)
 		{
-			if (comboBox1.SelectedItem.ToString() == "P(a < X < b)") Intervale();			  
+			if (comboBox1.SelectedItem.ToString() == "P(a < X < b)")
+			{
+				if (numericUpDown_A.Value > numericUpDown_B.Value) MessageBox.Show("La valeur de la variable a ne peut être supérieure à celle de la variable b.");
+				else Intervale();
+			}
 			else if (comboBox1.SelectedItem.ToString() == "P(X < a)") Inferieure();
 			else if (comboBox1.SelectedItem.ToString() == "P(X > a)") Superieure();
 		}
