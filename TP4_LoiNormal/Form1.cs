@@ -80,9 +80,12 @@ namespace TP4_LoiNormal
 
 		private void Intervale() //fonction pour calculer la probabilité d'être à l'intérieur d'une intervalle
 		{
+			bool sameSide = false;
 			double[] CoteZs = new double[]
 			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
 			Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)};
+
+			if ((CoteZs[0] < 0 && CoteZs[1] < 0) || (CoteZs[0] > 0 && CoteZs[1] > 0)) sameSide = true;
 
 			double Probabilite = 0;
 			int X, Y;
@@ -95,11 +98,15 @@ namespace TP4_LoiNormal
 				if (X < 0) X *= -1;
 				if (Y < 0) Y *= -1;
 
-				if(Probabilite <= 0) Probabilite += Table[X, Y];
-				else Probabilite -= Table[X, Y];
+				if(sameSide)
+				{
+					Probabilite -= Table[X, Y];
+					sameSide = false;
+				}
+				else Probabilite += Table[X, Y];
 			}
 			if (Probabilite < 0) Probabilite *= -1;
-			AfficherProb(Probabilite);
+			AfficherProb((float)Probabilite);
 		}
 
 		private void Inferieure() //fonction pour calculer la probabilité d'être inférieur à une valeur
@@ -115,7 +122,7 @@ namespace TP4_LoiNormal
 			if (Y < 0) Y *= -1;
 			if(CoteZ < 0) Probabilite -= Table[X, Y];
 			else Probabilite += Table[X, Y];
-			AfficherProb(Probabilite);
+			AfficherProb((float)Probabilite);
 		}
 
 		private void Superieure() //fonction pour calculer la probabilité d'être supérieur à une valeur
@@ -131,10 +138,10 @@ namespace TP4_LoiNormal
 			if (Y < 0) Y *= -1;
 			if (CoteZ > 0) Probabilite -= Table[X, Y];
 			else Probabilite += Table[X, Y];
-			AfficherProb(Probabilite);
+			AfficherProb((float)Probabilite);
 		}
 
-		private void AfficherProb(double probabilite) //fonction qui affiche la probabilité
+		private void AfficherProb(float probabilite) //fonction qui affiche la probabilité
 		{
 			textBox_Prob.Text =probabilite + "  ou  " + probabilite * 100 + "%";
 		}
