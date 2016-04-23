@@ -64,7 +64,7 @@ namespace TP4_LoiNormal
 			numericUpDown_A.Value = 0;
 			numericUpDown_B.Value = 0;
 			numericUpDown_Moyenne.Value = 0;
-			numericUpDown_ET.Value = numericUpDown_ET.Minimum;
+			numericUpDown_ET.Value = 1;
 			textBox_Prob.Text = "";
 			comboBox1.SelectedIndex = 0;
 		}

@@ -135,6 +135,12 @@
   <data name="button_Calculer.Text" xml:space="preserve">
     <value>Calculer</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="button_Calculer.ToolTip" xml:space="preserve">
+    <value>Calculer la probabilité.</value>
+  </data>
   <data name="&gt;&gt;button_Calculer.Name" xml:space="preserve">
     <value>button_Calculer</value>
   </data>
@@ -161,6 +167,9 @@
   </data>
   <data name="button_Réinitialiser.Text" xml:space="preserve">
     <value>Réinitialiser</value>
+  </data>
+  <data name="button_Réinitialiser.ToolTip" xml:space="preserve">
+    <value>Réinitialiser tous les champs d'entrées et sorties.</value>
   </data>
   <data name="&gt;&gt;button_Réinitialiser.Name" xml:space="preserve">
     <value>button_Réinitialiser</value>
@@ -210,6 +219,9 @@
   <data name="label1.Text" xml:space="preserve">
     <value>a</value>
   </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value>La valeur de la variable a. Cette valeur est exprimée en écart type. </value>
+  </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
@@ -239,6 +251,9 @@
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>b</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value>La valeur de la variable b. Cette valeur est exprimée en écart type. </value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -270,6 +285,10 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Moyenne</value>
   </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value>La valeur de la variable Moyenne. Cette valeur va de 0 jusqu'à 100. Si la moyenne est au-delà de 100, il faudra simplement la convertir en pourcentage.
+</value>
+  </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
   </data>
@@ -299,6 +318,9 @@
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Écart Type</value>
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value>La valeur de la variable de l'écartmtype. Si la moyenne est exprimé en pourcentage, il faudra exprimer l'écart type en pourcentage aussi.</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -330,6 +352,9 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Probabilité</value>
   </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value>Résultat de l'opération. Le fait de cliquer sur la valeur va automatiquement copier la valeur et la mettre dans le presse-papier.</value>
+  </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
@@ -359,6 +384,11 @@
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Cas</value>
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value>P(a &lt; X &lt; b) : La probabilité que X soit situé entre a et b.
+P(X &lt; a) : La probabilité que X soit inférieur à a.
+P(X &gt; a) : La probabilité que X soit supérieur à a.</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -489,11 +519,8 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 21</value>
-  </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+    <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>308, 278</value>
@@ -604,6 +631,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Loi Normale</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form_Main</value>
