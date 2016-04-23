@@ -159,7 +159,7 @@ namespace TP4_LoiNormal
 
 		private void DotToComma(object sender, KeyPressEventArgs e) //Event qui change un point pour une virgule
 		{
-			if (e.KeyChar.Equals('.'))
+			if (e.KeyChar.Equals('.') || e.KeyChar.Equals(','))
 			{
 				e.KeyChar = (System.Globalization.CultureInfo.CurrentCulture).NumberFormat.NumberDecimalSeparator.ToCharArray()[0];
 			}
