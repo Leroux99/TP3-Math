@@ -69,15 +69,5 @@ namespace TP4_LoiNormal.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relativity_00447991 {
-            get {
-                object obj = ResourceManager.GetObject("relativity_00447991", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

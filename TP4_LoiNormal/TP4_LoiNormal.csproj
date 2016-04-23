@@ -84,9 +84,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\relativity_00447991.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icone %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
