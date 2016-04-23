@@ -55,6 +55,7 @@ namespace TP4_LoiNormal
         {
             InitializeComponent();
 			comboBox1.SelectedIndex = 0;
+			numericUpDown_A.Focus();
 		}
 
 		//Se déclenche lorsque l'utilisateur pèse sur Réinitialiser
