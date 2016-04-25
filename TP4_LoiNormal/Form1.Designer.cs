@@ -155,19 +155,19 @@
             131072});
 			resources.ApplyResources(this.numericUpDown_A, "numericUpDown_A");
 			this.numericUpDown_A.Maximum = new decimal(new int[] {
-            409,
+            10000,
             0,
             0,
-            131072});
+            0});
 			this.numericUpDown_A.Minimum = new decimal(new int[] {
-            409,
+            10000,
             0,
             0,
-            -2147352576});
+            -2147483648});
 			this.numericUpDown_A.Name = "numericUpDown_A";
+			this.numericUpDown_A.DoubleClick += new System.EventHandler(this.SelectAllTextWithMouse);
 			this.numericUpDown_A.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_A.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
-			this.numericUpDown_A.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_B
 			// 
@@ -181,19 +181,19 @@
             131072});
 			resources.ApplyResources(this.numericUpDown_B, "numericUpDown_B");
 			this.numericUpDown_B.Maximum = new decimal(new int[] {
-            409,
+            10000,
             0,
             0,
-            131072});
+            0});
 			this.numericUpDown_B.Minimum = new decimal(new int[] {
-            409,
+            10000,
             0,
             0,
-            -2147352576});
+            -2147483648});
 			this.numericUpDown_B.Name = "numericUpDown_B";
+			this.numericUpDown_B.DoubleClick += new System.EventHandler(this.SelectAllTextWithMouse);
 			this.numericUpDown_B.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_B.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
-			this.numericUpDown_B.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_Moyenne
 			// 
@@ -206,10 +206,15 @@
             0,
             131072});
 			resources.ApplyResources(this.numericUpDown_Moyenne, "numericUpDown_Moyenne");
+			this.numericUpDown_Moyenne.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
 			this.numericUpDown_Moyenne.Name = "numericUpDown_Moyenne";
+			this.numericUpDown_Moyenne.DoubleClick += new System.EventHandler(this.SelectAllTextWithMouse);
 			this.numericUpDown_Moyenne.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_Moyenne.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
-			this.numericUpDown_Moyenne.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// numericUpDown_ET
 			// 
@@ -222,6 +227,11 @@
             0,
             131072});
 			resources.ApplyResources(this.numericUpDown_ET, "numericUpDown_ET");
+			this.numericUpDown_ET.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
 			this.numericUpDown_ET.Minimum = new decimal(new int[] {
             1,
             0,
@@ -233,9 +243,9 @@
             0,
             0,
             0});
+			this.numericUpDown_ET.DoubleClick += new System.EventHandler(this.SelectAllTextWithMouse);
 			this.numericUpDown_ET.Enter += new System.EventHandler(this.SelectAllTextWithTab);
 			this.numericUpDown_ET.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DotToComma);
-			this.numericUpDown_ET.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectAllTextWithMouse);
 			// 
 			// toolTip1
 			// 

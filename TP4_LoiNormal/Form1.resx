@@ -226,7 +226,7 @@
     <value>a</value>
   </data>
   <data name="label1.ToolTip" xml:space="preserve">
-    <value>La valeur de la variable a. Cette valeur est exprimée en écart type. </value>
+    <value>La valeur de la variable a.</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -259,7 +259,7 @@
     <value>b</value>
   </data>
   <data name="label2.ToolTip" xml:space="preserve">
-    <value>La valeur de la variable b. Cette valeur est exprimée en écart type. </value>
+    <value>La valeur de la variable b.</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -292,8 +292,7 @@
     <value>Moyenne</value>
   </data>
   <data name="label3.ToolTip" xml:space="preserve">
-    <value>La valeur de la variable Moyenne. Cette valeur va de 0 jusqu'à 100. Si la moyenne est au-delà de 100, il faudra simplement la convertir en pourcentage.
-</value>
+    <value>La valeur de la variable Moyenne. </value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -326,7 +325,7 @@
     <value>Écart Type</value>
   </data>
   <data name="label4.ToolTip" xml:space="preserve">
-    <value>La valeur de la variable de l'écartmtype. Si la moyenne est exprimé en pourcentage, il faudra exprimer l'écart type en pourcentage aussi.</value>
+    <value>La valeur de la variable de l'écart type.</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
