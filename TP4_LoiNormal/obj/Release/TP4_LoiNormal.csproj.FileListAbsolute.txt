@@ -1,9 +1,9 @@
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Release\TP4_LoiNormal.exe.config
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Release\TP4_LoiNormal.exe
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\bin\Release\TP4_LoiNormal.pdb
+C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.csprojResolveAssemblyReference.cache
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.Form_Main.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.Properties.Resources.resources
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.csproj.GenerateResource.Cache
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.exe
 C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.pdb
-C:\Users\Leroux\Documents\GitHub\TP3-Math\TP4_LoiNormal\obj\Release\TP4_LoiNormal.csprojResolveAssemblyReference.cache

@@ -73,57 +73,44 @@ namespace TP4_LoiNormal
 		//Se déclenche lorsque l'utilisateur pèse sur Calculer
 		//Choisis la bonne fonction en fonction du choix de l'utilisateur
 		private void button_Calculer_Click(object sender, EventArgs e)
-		{
+		{	
 			if (comboBox1.SelectedItem.ToString() == "P(a < X < b)")
 			{
 				if (numericUpDown_A.Value > numericUpDown_B.Value) MessageBox.Show("La valeur de la variable a ne peut être supérieure à celle de la variable b.");
-				else Intervale();
+				else Probabilite(new double[]
+						{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
+						Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)});
 			}
-			else if (comboBox1.SelectedItem.ToString() == "P(X < a)") Inferieure();
-			else if (comboBox1.SelectedItem.ToString() == "P(X > a)") Superieure();
-		}
-
-		private void Intervale() //fonction pour calculer la probabilité d'être à l'intérieur d'une intervalle
-		{
-			Probabilite(new double[]
-			{Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value),
-			Convert.ToDouble((numericUpDown_B.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value)});
-		}
-
-		private void Inferieure() //fonction pour calculer la probabilité d'être inférieur à une valeur
-		{
-			Probabilite(new double[] {
-				Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), -4 });
-		}
-
-		private void Superieure() //fonction pour calculer la probabilité d'être supérieur à une valeur
-		{
-			Probabilite(new double[] {
-				Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), 4 });
+			else if (comboBox1.SelectedItem.ToString() == "P(X < a)")
+				Probabilite(new double[] {
+					Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), -4 });
+			else if (comboBox1.SelectedItem.ToString() == "P(X > a)")
+				Probabilite(new double[] {
+					Convert.ToDouble((numericUpDown_A.Value - numericUpDown_Moyenne.Value) / numericUpDown_ET.Value), 4 });
 		}
 
 		private void Probabilite(double[] Valeurs) //fonction qui calcule la probabilite
 		{
-			bool sameSide = false;
+			bool MemeSignes = false;
 
-			if ((Valeurs[0] < 0 && Valeurs[1] < 0) || (Valeurs[0] > 0 && Valeurs[1] > 0)) sameSide = true;
+			if ((Valeurs[0] < 0 && Valeurs[1] < 0) || (Valeurs[0] > 0 && Valeurs[1] > 0)) MemeSignes = true;
 
 			double Probabilite = 0;
 			int X, Y;
 
 			foreach (double d in Valeurs)
 			{
-				Y = (int)(d * 100) - ((int)(d * 100) / 10) * 10; ;
+				Y = (int)(d * 100) - (int)(d * 10) * 10;
 				X = (int)(d * 10);
 
 				if (X < 0) X *= -1;
 				if (Y < 0) Y *= -1;
-				if (X > 41) X = 40;
+				if (X > 40) X = 40;
 
-				if (sameSide)
+				if (MemeSignes)
 				{
 					Probabilite -= Table[X, Y];
-					sameSide = false;
+					MemeSignes = false;
 				}
 				else Probabilite += Table[X, Y];
 			}
