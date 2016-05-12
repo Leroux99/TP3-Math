@@ -6,6 +6,7 @@ namespace PFI3
 	public partial class Form1 : Form
 	{
 		Random random;
+		double Aire_Totale;
 		double Total_Pts = 10000;
 		double Y_Min = 0;
 		double Y_Max;
@@ -43,6 +44,7 @@ namespace PFI3
 
 		private void Fonction1()
 		{
+			Aire_Totale = 24.9062;
 			Y_Max = 5;
 			double Nbr_Points = 0;
 			for (int i = 1; i <= Total_Pts; ++i)
@@ -59,18 +61,18 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (X_Max - X_Min) * Y_Max * p;
-			double ME_Aire = ME * Aire;
+			String Probabilite = "[" + ((X_Max - X_Min) * Y_Max * (p - ME) / Aire_Totale).ToString("0.0000") + " ; " + ((X_Max - X_Min) * Y_Max * (p + ME) / Aire_Totale).ToString("0.0000") + "]";
 
 			textBox_Pi.Text = p.ToString("0.0000");
 			textBox_IC.Text = (p * 100).ToString("0.00") + "% +/- " + (ME * 100).ToString("0.00") + "%";
 			textBox_ME.Text = (ME * 100).ToString("0.00");
-			textBox_Aire.Text = Aire.ToString("0.0000") + " +/- " + ME_Aire.ToString("0.0000");
+			textBox_Aire.Text = Probabilite;
 
 		}
 
 		private void Fonction2()
 		{
+			Aire_Totale = 36.2815;
 			Y_Max = 5;
 			double Nbr_Points = 0;
 			for (int i = 1; i <= Total_Pts; ++i)
@@ -87,17 +89,17 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (X_Max - X_Min) * Y_Max * p;
-			double ME_Aire = ME * Aire;
+			String Probabilite = "[" + ((X_Max - X_Min) * Y_Max * (p - ME) / Aire_Totale).ToString("0.0000") + " ; " + ((X_Max - X_Min) * Y_Max * (p + ME) / Aire_Totale).ToString("0.0000") + "]";
 
 			textBox_Pi.Text = p.ToString("0.0000");
 			textBox_IC.Text = (p * 100).ToString("0.00") + "% +/- " + (ME * 100).ToString("0.00") + "%";
 			textBox_ME.Text = (ME * 100).ToString("0.00");
-			textBox_Aire.Text = Aire.ToString("0.0000") + " +/- " + ME_Aire.ToString("0.0000");
+			textBox_Aire.Text = Probabilite;
 		}
 
 		private void Fonction3()
 		{
+			Aire_Totale = 94.1111;
 			Y_Max = 12;
 			double Nbr_Points = 0;
 			for (int i = 1; i <= Total_Pts; ++i)
@@ -114,17 +116,17 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (X_Max - X_Min) * Y_Max * p;
-			double ME_Aire = ME * Aire;
+			String Probabilite = "[" + ((X_Max - X_Min) * Y_Max * (p - ME) / Aire_Totale).ToString("0.0000") + " ; " + ((X_Max - X_Min) * Y_Max * (p + ME) / Aire_Totale).ToString("0.0000") + "]";
 
 			textBox_Pi.Text = p.ToString("0.0000");
 			textBox_IC.Text = (p * 100).ToString("0.00") + "% +/- " + (ME * 100).ToString("0.00") + "%";
 			textBox_ME.Text = (ME * 100).ToString("0.00");
-			textBox_Aire.Text = Aire.ToString("0.0000") + " +/- " + ME_Aire.ToString("0.0000");
+			textBox_Aire.Text = Probabilite;
 		}
 
 		private void Fonction4()
 		{
+			Aire_Totale = 61.4956;
 			Y_Max = 10;
 			double Nbr_Points = 0;
 			for (int i = 1; i <= Total_Pts; ++i)
@@ -141,13 +143,12 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (X_Max - X_Min) * Y_Max * p;
-			double ME_Aire = ME * Aire;
+			String Probabilite = "[" + ((X_Max - X_Min) * Y_Max * (p - ME) / Aire_Totale).ToString("0.0000") + " ; " + ((X_Max - X_Min) * Y_Max * (p + ME) / Aire_Totale).ToString("0.0000") + "]";
 
 			textBox_Pi.Text = p.ToString("0.0000");
 			textBox_IC.Text = (p * 100).ToString("0.00") + "% +/- " + (ME * 100).ToString("0.00") + "%";
 			textBox_ME.Text = (ME * 100).ToString("0.00");
-			textBox_Aire.Text = Aire.ToString("0.0000") + " +/- " + ME_Aire.ToString("0.0000");
+			textBox_Aire.Text = Probabilite;
 		}
 
 		private void buttonClear_Click(object sender, EventArgs e)
@@ -163,6 +164,7 @@ namespace PFI3
 
 		private void Fonction5()
 		{
+			Aire_Totale = 32;
 			Y_Max = 4;
 			double Nbr_Points = 0;
 			for(int i = 1; i <= Total_Pts; ++i)
@@ -179,13 +181,12 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (X_Max - X_Min) * Y_Max * p;
-			double ME_Aire = ME * Aire;
+			String Probabilite = "[" + ((X_Max - X_Min) * Y_Max * (p - ME) / Aire_Totale).ToString("0.0000") + " ; " + ((X_Max - X_Min) * Y_Max * (p + ME) / Aire_Totale).ToString("0.0000") + "]";
 
 			textBox_Pi.Text = p.ToString("0.0000");
 			textBox_IC.Text = (p * 100).ToString("0.00") + "% +/- " + (ME * 100).ToString("0.00") + "%";
 			textBox_ME.Text = (ME * 100).ToString("0.00");	
-			textBox_Aire.Text = Aire.ToString("0.0000") + " +/- " + ME_Aire.ToString("0.0000");
+			textBox_Aire.Text = Probabilite;
 		}
 
 		private void DotToComma(object sender, KeyPressEventArgs e) //Event qui change un point pour une virgule
