@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PFI3
@@ -13,8 +6,6 @@ namespace PFI3
 	public partial class Form1 : Form
 	{
 		Random random;
-		double Limite_Max_X = 11;
-		double Limite_Min_X = 0;
 		double Total_Pts = 10000;
 		double Y_Min = 0;
 		double Y_Max;
@@ -68,7 +59,7 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (Limite_Max_X - Limite_Min_X) * Y_Max * p;
+			double Aire = (X_Max - X_Min) * Y_Max * p;
 			double ME_Aire = ME * Aire;
 
 			textBox_Pi.Text = p.ToString("0.0000");
@@ -96,7 +87,7 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (Limite_Max_X - Limite_Min_X) * Y_Max * p;
+			double Aire = (X_Max - X_Min) * Y_Max * p;
 			double ME_Aire = ME * Aire;
 
 			textBox_Pi.Text = p.ToString("0.0000");
@@ -123,7 +114,7 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (Limite_Max_X - Limite_Min_X) * Y_Max * p;
+			double Aire = (X_Max - X_Min) * Y_Max * p;
 			double ME_Aire = ME * Aire;
 
 			textBox_Pi.Text = p.ToString("0.0000");
@@ -150,7 +141,7 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (Limite_Max_X - Limite_Min_X) * Y_Max * p;
+			double Aire = (X_Max - X_Min) * Y_Max * p;
 			double ME_Aire = ME * Aire;
 
 			textBox_Pi.Text = p.ToString("0.0000");
@@ -188,7 +179,7 @@ namespace PFI3
 
 			double p = Nbr_Points / Total_Pts;
 			double ME = 1.96 * Math.Sqrt(p * (1 - p) / Total_Pts);
-			double Aire = (Limite_Max_X - Limite_Min_X) * Y_Max * p;
+			double Aire = (X_Max - X_Min) * Y_Max * p;
 			double ME_Aire = ME * Aire;
 
 			textBox_Pi.Text = p.ToString("0.0000");
