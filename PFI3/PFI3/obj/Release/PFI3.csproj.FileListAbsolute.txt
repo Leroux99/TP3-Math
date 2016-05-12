@@ -1,0 +1,8 @@
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Release\PFI3.exe.config
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Release\PFI3.exe
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Release\PFI3.pdb
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Release\PFI3.Form1.resources
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Release\PFI3.Properties.Resources.resources
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Release\PFI3.csproj.GenerateResource.Cache
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Release\PFI3.exe
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Release\PFI3.pdb

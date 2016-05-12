@@ -1,0 +1,9 @@
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Debug\PFI3.exe.config
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Debug\PFI3.exe
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\bin\Debug\PFI3.pdb
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.csprojResolveAssemblyReference.cache
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.Form1.resources
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.Properties.Resources.resources
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.csproj.GenerateResource.Cache
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.exe
+C:\Users\Leroux\Documents\GitHub\PFI3\PFI3\obj\Debug\PFI3.pdb
